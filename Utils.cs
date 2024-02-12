@@ -13,7 +13,7 @@ namespace OOP_APP
 {
     internal class Utils
     {
-       public static MySqlConnection cnx = new MySqlConnection("server=localhost;database=gestion_restaurant;uid=root;password=");
+       public static MySqlConnection cnx = new MySqlConnection("server=localhost;database=restaurant;uid=root;password=");
         public static DataTable dataTable = new DataTable();
 
 
@@ -26,13 +26,13 @@ namespace OOP_APP
                 {
                     cnx.Open();
                     Console.WriteLine("Connexion à la base de données ouverte avec succès.");
-                    MessageBox.Show("Connexion à la base de données ouverte avec succès.","Gestion Banque");
+                    MessageBox.Show("Connexion à la base de données ouverte avec succès.","Gestion Restaurant");
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Erreur lors de l'ouverture de la connexion : " + ex.Message);
-                MessageBox.Show("Erreur lors de l'ouverture de la connexion : " + ex.Message, "Gestion Banque");
+                MessageBox.Show("Erreur lors de l'ouverture de la connexion : " + ex.Message, "Gestion Restaurant");
             }
         }
 
@@ -45,13 +45,13 @@ namespace OOP_APP
                 {
                     cnx.Close();
                     Console.WriteLine("Connexion à la base de données fermée avec succès.");
-                     MessageBox.Show("Connexion à la base de données fermer avec succès.", "Gestion Banque");
+                     MessageBox.Show("Connexion à la base de données fermer avec succès.", "Gestion Restaurant");
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Erreur lors de la fermeture de la connexion : " + ex.Message);
-                MessageBox.Show("Connexion à la base de données fermer avec succès.", "Gestion Banque");
+                MessageBox.Show("Connexion à la base de données fermer avec succès.", "Gestion Restaurant");
             }
         }
 
@@ -70,7 +70,7 @@ namespace OOP_APP
                     {
                         command.ExecuteNonQuery();
                         Console.WriteLine($"La colonne {id} a été supprimée de la table {table} avec succès.");
-                        MessageBox.Show($"La colonne {id} a été supprimée de la table {table} avec succès.", "Gestion Banque");
+                        MessageBox.Show($"La colonne {id} a été supprimée de la table {table} avec succès.", "Gestion Restaurant");
                     }
                 }
             }
@@ -101,7 +101,7 @@ namespace OOP_APP
             catch (Exception ex)
             {
                 Console.WriteLine($"Erreur lors de la récupération des données : {ex.Message}");
-                MessageBox.Show($"Erreur lors de la récupération des données .{ex.Message}", "Gestion Banque");
+                MessageBox.Show($"Erreur lors de la récupération des données .{ex.Message}", "Gestion Restaurant");
             }
 
             return dataTable;

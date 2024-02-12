@@ -69,7 +69,7 @@ namespace OOP_APP
                 {
                     Utils.OpenConnection();
 
-                    string query = "UPDATE employees SET nom = @Nom, prenom = @Prenom,cin = @cin, adresse = @Adresse,date_naissance = @date_naissance, post = @post WHERE id = @id";
+                    string query = "UPDATE employee SET nom = @Nom, prenom = @Prenom,cin = @cin, adresse = @Adresse,date_naissance = @date_naissance, post = @post WHERE id = @id";
 
 
                     MySqlCommand command = new MySqlCommand(query, Utils.cnx);
