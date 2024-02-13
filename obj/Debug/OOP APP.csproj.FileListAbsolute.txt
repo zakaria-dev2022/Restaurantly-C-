@@ -43,3 +43,4 @@ C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP APP.csproj.CopyComplete
 C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP APP.exe
 C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP APP.pdb
 C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.formEmployee.resources
+C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.formProduits.resources
