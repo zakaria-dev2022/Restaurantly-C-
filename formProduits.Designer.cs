@@ -45,13 +45,16 @@
             this.upload = new System.Windows.Forms.Button();
             this.txttp = new System.Windows.Forms.ComboBox();
             this.chemin_Img = new System.Windows.Forms.Label();
+            this.btn_ajouter_type_produit = new System.Windows.Forms.Button();
+            this.panel_produit = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.tableau)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_produit)).BeginInit();
+            this.panel_produit.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtdp
             // 
-            this.txtdp.Location = new System.Drawing.Point(289, 144);
+            this.txtdp.Location = new System.Drawing.Point(285, 141);
             this.txtdp.Multiline = true;
             this.txtdp.Name = "txtdp";
             this.txtdp.Size = new System.Drawing.Size(181, 26);
@@ -61,7 +64,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(782, 18);
+            this.label6.Location = new System.Drawing.Point(778, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 26);
             this.label6.TabIndex = 57;
@@ -71,7 +74,7 @@
             // 
             this.la.AutoSize = true;
             this.la.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.la.Location = new System.Drawing.Point(76, 142);
+            this.la.Location = new System.Drawing.Point(72, 139);
             this.la.Name = "la";
             this.la.Size = new System.Drawing.Size(132, 26);
             this.la.TabIndex = 56;
@@ -80,7 +83,7 @@
             // tableau
             // 
             this.tableau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableau.Location = new System.Drawing.Point(81, 444);
+            this.tableau.Location = new System.Drawing.Point(77, 441);
             this.tableau.Name = "tableau";
             this.tableau.RowHeadersWidth = 62;
             this.tableau.RowTemplate.Height = 28;
@@ -92,7 +95,7 @@
             // 
             this.Modifier.Enabled = false;
             this.Modifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Modifier.Location = new System.Drawing.Point(820, 356);
+            this.Modifier.Location = new System.Drawing.Point(816, 353);
             this.Modifier.Name = "Modifier";
             this.Modifier.Size = new System.Drawing.Size(160, 40);
             this.Modifier.TabIndex = 53;
@@ -104,7 +107,7 @@
             // 
             this.Suprimer.Enabled = false;
             this.Suprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Suprimer.Location = new System.Drawing.Point(507, 356);
+            this.Suprimer.Location = new System.Drawing.Point(503, 353);
             this.Suprimer.Name = "Suprimer";
             this.Suprimer.Size = new System.Drawing.Size(160, 40);
             this.Suprimer.TabIndex = 52;
@@ -115,7 +118,7 @@
             // Ajouter
             // 
             this.Ajouter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ajouter.Location = new System.Drawing.Point(219, 356);
+            this.Ajouter.Location = new System.Drawing.Point(215, 353);
             this.Ajouter.Name = "Ajouter";
             this.Ajouter.Size = new System.Drawing.Size(160, 40);
             this.Ajouter.TabIndex = 51;
@@ -127,7 +130,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(76, 199);
+            this.label3.Location = new System.Drawing.Point(72, 196);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(153, 26);
             this.label3.TabIndex = 49;
@@ -137,7 +140,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(76, 91);
+            this.label2.Location = new System.Drawing.Point(72, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 26);
             this.label2.TabIndex = 48;
@@ -147,7 +150,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(76, 45);
+            this.label1.Location = new System.Drawing.Point(72, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 26);
             this.label1.TabIndex = 47;
@@ -155,21 +158,21 @@
             // 
             // txtp
             // 
-            this.txtp.Location = new System.Drawing.Point(289, 92);
+            this.txtp.Location = new System.Drawing.Point(285, 89);
             this.txtp.Name = "txtp";
             this.txtp.Size = new System.Drawing.Size(181, 26);
             this.txtp.TabIndex = 45;
             // 
             // txtl
             // 
-            this.txtl.Location = new System.Drawing.Point(289, 47);
+            this.txtl.Location = new System.Drawing.Point(285, 44);
             this.txtl.Name = "txtl";
             this.txtl.Size = new System.Drawing.Size(181, 26);
             this.txtl.TabIndex = 44;
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(378, 92);
+            this.txtid.Location = new System.Drawing.Point(374, 89);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(85, 26);
             this.txtid.TabIndex = 55;
@@ -177,7 +180,7 @@
             // 
             // img_produit
             // 
-            this.img_produit.Location = new System.Drawing.Point(678, 56);
+            this.img_produit.Location = new System.Drawing.Point(674, 53);
             this.img_produit.Name = "img_produit";
             this.img_produit.Size = new System.Drawing.Size(269, 195);
             this.img_produit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -187,7 +190,7 @@
             // upload
             // 
             this.upload.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.upload.Location = new System.Drawing.Point(732, 277);
+            this.upload.Location = new System.Drawing.Point(728, 274);
             this.upload.Name = "upload";
             this.upload.Size = new System.Drawing.Size(160, 40);
             this.upload.TabIndex = 60;
@@ -198,7 +201,7 @@
             // txttp
             // 
             this.txttp.FormattingEnabled = true;
-            this.txttp.Location = new System.Drawing.Point(289, 199);
+            this.txttp.Location = new System.Drawing.Point(285, 196);
             this.txttp.Name = "txttp";
             this.txttp.Size = new System.Drawing.Size(181, 28);
             this.txttp.TabIndex = 61;
@@ -207,43 +210,66 @@
             // 
             this.chemin_Img.AutoSize = true;
             this.chemin_Img.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chemin_Img.Location = new System.Drawing.Point(739, 284);
+            this.chemin_Img.Location = new System.Drawing.Point(735, 281);
             this.chemin_Img.Name = "chemin_Img";
             this.chemin_Img.Size = new System.Drawing.Size(142, 26);
             this.chemin_Img.TabIndex = 62;
             this.chemin_Img.Text = "chemin_Img";
             this.chemin_Img.Visible = false;
             // 
+            // btn_ajouter_type_produit
+            // 
+            this.btn_ajouter_type_produit.Font = new System.Drawing.Font("Arial Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ajouter_type_produit.Location = new System.Drawing.Point(486, 196);
+            this.btn_ajouter_type_produit.Name = "btn_ajouter_type_produit";
+            this.btn_ajouter_type_produit.Size = new System.Drawing.Size(42, 38);
+            this.btn_ajouter_type_produit.TabIndex = 64;
+            this.btn_ajouter_type_produit.Text = "+";
+            this.btn_ajouter_type_produit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_ajouter_type_produit.UseVisualStyleBackColor = true;
+            this.btn_ajouter_type_produit.Click += new System.EventHandler(this.btn_ajouter_type_produit_Click);
+            // 
+            // panel_produit
+            // 
+            this.panel_produit.Controls.Add(this.btn_ajouter_type_produit);
+            this.panel_produit.Controls.Add(this.txttp);
+            this.panel_produit.Controls.Add(this.upload);
+            this.panel_produit.Controls.Add(this.img_produit);
+            this.panel_produit.Controls.Add(this.txtdp);
+            this.panel_produit.Controls.Add(this.label6);
+            this.panel_produit.Controls.Add(this.la);
+            this.panel_produit.Controls.Add(this.tableau);
+            this.panel_produit.Controls.Add(this.Modifier);
+            this.panel_produit.Controls.Add(this.Suprimer);
+            this.panel_produit.Controls.Add(this.Ajouter);
+            this.panel_produit.Controls.Add(this.label3);
+            this.panel_produit.Controls.Add(this.label2);
+            this.panel_produit.Controls.Add(this.label1);
+            this.panel_produit.Controls.Add(this.txtp);
+            this.panel_produit.Controls.Add(this.txtl);
+            this.panel_produit.Controls.Add(this.txtid);
+            this.panel_produit.Controls.Add(this.chemin_Img);
+            this.panel_produit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_produit.Location = new System.Drawing.Point(0, 0);
+            this.panel_produit.Name = "panel_produit";
+            this.panel_produit.Size = new System.Drawing.Size(1117, 721);
+            this.panel_produit.TabIndex = 65;
+            // 
             // formProduits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1117, 721);
-            this.Controls.Add(this.txttp);
-            this.Controls.Add(this.upload);
-            this.Controls.Add(this.img_produit);
-            this.Controls.Add(this.txtdp);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.la);
-            this.Controls.Add(this.tableau);
-            this.Controls.Add(this.Modifier);
-            this.Controls.Add(this.Suprimer);
-            this.Controls.Add(this.Ajouter);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtp);
-            this.Controls.Add(this.txtl);
-            this.Controls.Add(this.txtid);
-            this.Controls.Add(this.chemin_Img);
+            this.Controls.Add(this.panel_produit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formProduits";
             this.Text = "formProduits";
             this.Load += new System.EventHandler(this.formProduits_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tableau)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_produit)).EndInit();
+            this.panel_produit.ResumeLayout(false);
+            this.panel_produit.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -266,5 +292,7 @@
         private System.Windows.Forms.Button upload;
         private System.Windows.Forms.ComboBox txttp;
         private System.Windows.Forms.Label chemin_Img;
+        private System.Windows.Forms.Button btn_ajouter_type_produit;
+        private System.Windows.Forms.Panel panel_produit;
     }
 }

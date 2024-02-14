@@ -70,6 +70,8 @@ namespace OOP_APP
         {
             remplir_txttp();
             remplir();
+            //panel_type_produit.Visible = false;
+            panel_produit.Visible = true;
         }
         void nouveau()
         {
@@ -183,7 +185,14 @@ namespace OOP_APP
             throw new Exception("Aucune donnée trouvée pour le type de produit : " + txttp.Text);
         }
 
+        private void btn_ajouter_type_produit_Click(object sender, EventArgs e)
+        {
+            formTypeProduit formtp = new formTypeProduit();
+            formtp.Show();
+            this.Hide();
+           
+        }
 
-
+       
     }
 }
