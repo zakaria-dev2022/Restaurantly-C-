@@ -16,5 +16,10 @@ namespace OOP_APP
         {
             InitializeComponent();
         }
+
+        private void formTypeProduit_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

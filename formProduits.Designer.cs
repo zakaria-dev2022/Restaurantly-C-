@@ -254,6 +254,7 @@
             this.panel_produit.Name = "panel_produit";
             this.panel_produit.Size = new System.Drawing.Size(1117, 721);
             this.panel_produit.TabIndex = 65;
+            this.panel_produit.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_produit_Paint);
             // 
             // formProduits
             // 

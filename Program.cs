@@ -16,7 +16,7 @@ namespace OOP_APP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formProduits());
+            Application.Run(new Login());
         }
     }
 }

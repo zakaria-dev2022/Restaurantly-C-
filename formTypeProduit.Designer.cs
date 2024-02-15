@@ -125,6 +125,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formTypeProduit";
             this.Text = "formTypeProduit";
+            this.Load += new System.EventHandler(this.formTypeProduit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tableau_type)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

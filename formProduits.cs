@@ -140,7 +140,7 @@ namespace OOP_APP
                 chemin_Img.Text = chemin;
                 //chemin =txtmt.Text + " Photo voiture" : typeFile;
                 //File.Copy(fileinfo.FullName, Application.StartupPath + "/img_client/" + chemin);
-                File.Copy(fileinfo.FullName, @"C:\laragon\www\OOP APP\image\" + chemin);
+                File.Copy(fileinfo.FullName, @"C:\laragon\www\OOP APP\Site\img\" + chemin);
 
             }
         }
@@ -193,6 +193,9 @@ namespace OOP_APP
            
         }
 
-       
+        private void panel_produit_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
