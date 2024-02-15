@@ -63,9 +63,59 @@ namespace OOP_APP.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap deconnection {
+            get {
+                object obj = ResourceManager.GetObject("deconnection", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delicieux_burger_ingredients_frais {
             get {
                 object obj = ResourceManager.GetObject("delicieux-burger-ingredients-frais", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design_sans_titre__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Design sans titre (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design_sans_titre__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Design sans titre (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design_sans_titre__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Design sans titre (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design_sans_titre__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Design sans titre (9)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

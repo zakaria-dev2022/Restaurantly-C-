@@ -16,5 +16,10 @@ namespace OOP_APP
         {
             InitializeComponent();
         }
+
+        private void dashbord_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
