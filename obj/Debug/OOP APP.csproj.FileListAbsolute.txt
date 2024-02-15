@@ -47,3 +47,4 @@ C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.formProduits.resources
 C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.formTypeProduit.resources
 C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\Guna.UI2.dll
 C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.Login.resources
+C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.dashbord.resources

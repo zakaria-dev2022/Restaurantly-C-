@@ -158,7 +158,7 @@ namespace OOP_APP
                string type_produit=TransferTypeString(id_type_produit);
                 txttp.Text = type_produit;
                 chemin_Img.Text = row.Cells["image"].Value.ToString();
-                img_produit.Load(@"C:\laragon\www\OOP APP\image\" + chemin_Img.Text);
+                img_produit.Load(@"C:\laragon\www\OOP APP\Site\img\" + chemin_Img.Text);
                 Ajouter.Enabled = false;
                 Modifier.Enabled = true;
                 Suprimer.Enabled = true;

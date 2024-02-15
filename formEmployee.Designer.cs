@@ -59,7 +59,7 @@
             // tableau
             // 
             this.tableau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableau.Location = new System.Drawing.Point(51, 381);
+            this.tableau.Location = new System.Drawing.Point(93, 390);
             this.tableau.Name = "tableau";
             this.tableau.RowHeadersWidth = 62;
             this.tableau.RowTemplate.Height = 28;
@@ -226,6 +226,7 @@
             this.Controls.Add(this.txtp);
             this.Controls.Add(this.txtn);
             this.Controls.Add(this.txtid);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formEmployee";
             this.Text = "formEmployee";
             this.Load += new System.EventHandler(this.formEmployee_Load);
