@@ -103,6 +103,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dashbord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashbord.Designer.cs">
+      <DependentUpon>dashbord.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="interface.cs">
       <SubType>Form</SubType>

@@ -31,13 +31,10 @@
             this.lb_logo = new System.Windows.Forms.Label();
             this.txtmp = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtnu = new System.Windows.Forms.TextBox();
+            this.txtlg = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.connecter = new Guna.UI2.WinForms.Guna2Button();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,12 +70,12 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Mot De Passe";
             // 
-            // txtnu
+            // txtlg
             // 
-            this.txtnu.Location = new System.Drawing.Point(189, 302);
-            this.txtnu.Name = "txtnu";
-            this.txtnu.Size = new System.Drawing.Size(349, 26);
-            this.txtnu.TabIndex = 12;
+            this.txtlg.Location = new System.Drawing.Point(189, 302);
+            this.txtlg.Name = "txtlg";
+            this.txtlg.Size = new System.Drawing.Size(349, 26);
+            this.txtlg.TabIndex = 12;
             // 
             // label2
             // 
@@ -89,33 +86,9 @@
             this.label2.Location = new System.Drawing.Point(206, 251);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(221, 33);
+            this.label2.Size = new System.Drawing.Size(77, 33);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Nom De Utilisateur";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(734, 81);
-            this.panel1.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Font = new System.Drawing.Font("Arial", 26F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(214, 9);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(303, 59);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Bienvenue ";
+            this.label2.Text = "Login";
             // 
             // connecter
             // 
@@ -132,13 +105,14 @@
             this.connecter.Size = new System.Drawing.Size(189, 45);
             this.connecter.TabIndex = 17;
             this.connecter.Text = "Se Connecter";
+            this.connecter.Click += new System.EventHandler(this.connecter_Click);
             // 
             // logo
             // 
             this.logo.Image = global::OOP_APP.Properties.Resources.Saveurs;
-            this.logo.Location = new System.Drawing.Point(203, 98);
+            this.logo.Location = new System.Drawing.Point(212, 24);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(335, 137);
+            this.logo.Size = new System.Drawing.Size(344, 208);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.logo.TabIndex = 10;
             this.logo.TabStop = false;
@@ -152,18 +126,15 @@
             this.Controls.Add(this.connecter);
             this.Controls.Add(this.txtmp);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtnu);
+            this.Controls.Add(this.txtlg);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.logo);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lb_logo);
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -175,11 +146,9 @@
         private System.Windows.Forms.Label lb_logo;
         private System.Windows.Forms.TextBox txtmp;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtnu;
+        private System.Windows.Forms.TextBox txtlg;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox logo;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button connecter;
     }
 }
