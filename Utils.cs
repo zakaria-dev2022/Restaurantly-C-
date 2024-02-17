@@ -13,7 +13,7 @@ namespace OOP_APP
 {
     internal class Utils
     {
-       public static MySqlConnection cnx = new MySqlConnection("server=localhost;database=restaurant;uid=root;password=");
+       public static MySqlConnection cnx = new MySqlConnection("server=localhost;database=restaurant_db;uid=root;password=");
         public static DataTable dataTable = new DataTable();
 
 

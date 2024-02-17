@@ -140,14 +140,14 @@ namespace OOP_APP
                 chemin_Img.Text = chemin;
                 //chemin =txtmt.Text + " Photo voiture" : typeFile;
                 //File.Copy(fileinfo.FullName, Application.StartupPath + "/img_client/" + chemin);
-                File.Copy(fileinfo.FullName, @"C:\laragon\www\OOP APP\Site\img\" + chemin);
+                File.Copy(fileinfo.FullName, @"C:\laragon\www\Restaurantly\assets\img\menu\" + chemin);
 
             }
         }
 
         private void tableau_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex >= 0) 
             {
                 DataGridViewRow row = tableau.Rows[e.RowIndex];
                 txtid.Text = row.Cells["id"].Value.ToString();
@@ -158,7 +158,7 @@ namespace OOP_APP
                string type_produit=TransferTypeString(id_type_produit);
                 txttp.Text = type_produit;
                 chemin_Img.Text = row.Cells["image"].Value.ToString();
-                img_produit.Load(@"C:\laragon\www\OOP APP\Site\img\" + chemin_Img.Text);
+                img_produit.Load(@"C:\laragon\www\Restaurantly\assets\img\menu\" + chemin_Img.Text);
                 Ajouter.Enabled = false;
                 Modifier.Enabled = true;
                 Suprimer.Enabled = true;

@@ -32,6 +32,9 @@ namespace OOP_APP
             txta.Text = "";
             txtpt.Text = "";
             txtn.Focus();
+            Ajouter.Enabled = true;
+            Modifier.Enabled = false;
+            Suprimer.Enabled = false;
         }
 
         void remplir()
@@ -39,6 +42,7 @@ namespace OOP_APP
             Utils.CloseConnection();
             //Connection dbOperations = new Connection();
             DataTable dataTable = Utils.ObtenirDonnees("select * from employee");
+            //DataTable dataTable = Utils.ObtenirDonnees("select nom,prenom,cin,adresse,date_naissance,post from employee");
             // Lier le DataTable au DataGridView
             tableau.DataSource = dataTable;
 
@@ -51,9 +55,7 @@ namespace OOP_APP
             nouveau();
             //Connection.CloseConnection();
             remplir();
-            Ajouter.Enabled = true;
-            Modifier.Enabled = false;
-            Suprimer.Enabled = false;
+            
         }
 
         private void Suprimer_Click(object sender, EventArgs e)
@@ -101,6 +103,11 @@ namespace OOP_APP
                 Modifier.Enabled = true;
                 Suprimer.Enabled = true;
             }
+        }
+
+        private void formEmployee_DoubleClick(object sender, EventArgs e)
+        {
+            nouveau();
         }
     }
 }
