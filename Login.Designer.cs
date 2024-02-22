@@ -62,13 +62,14 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label3.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(175)))), ((int)(((byte)(113)))));
             this.label3.Location = new System.Drawing.Point(206, 358);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 33);
             this.label3.TabIndex = 13;
             this.label3.Text = "Mot De Passe";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtlg
             // 
@@ -82,7 +83,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(175)))), ((int)(((byte)(113)))));
             this.label2.Location = new System.Drawing.Point(206, 251);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -97,7 +98,7 @@
             this.connecter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.connecter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.connecter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.connecter.FillColor = System.Drawing.Color.Goldenrod;
+            this.connecter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(175)))), ((int)(((byte)(113)))));
             this.connecter.Font = new System.Drawing.Font("Arial", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.connecter.ForeColor = System.Drawing.Color.Black;
             this.connecter.Location = new System.Drawing.Point(279, 479);
@@ -109,11 +110,11 @@
             // 
             // logo
             // 
-            this.logo.Image = global::OOP_APP.Properties.Resources.Saveurs;
+            this.logo.Image = global::OOP_APP.Properties.Resources.restaurantly;
             this.logo.Location = new System.Drawing.Point(212, 24);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(344, 208);
-            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logo.TabIndex = 10;
             this.logo.TabStop = false;
             // 

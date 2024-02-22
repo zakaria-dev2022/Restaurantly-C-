@@ -24,7 +24,7 @@ namespace OOP_APP
         {
             if (txtlg.Text != "" && txtmp.Text != "")
             {
-                string connectionString = "server=localhost;user=root;database=restaurant;password=";
+                string connectionString = "server=localhost;user=root;database=restaurant_db;password=";
 
                 string query = "SELECT * FROM admin WHERE login = @Username AND mot_de_passe = @Password";
 
@@ -71,10 +71,9 @@ namespace OOP_APP
 
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
 
-
-
-
-
+        }
     }
 }

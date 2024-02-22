@@ -29,7 +29,7 @@ namespace OOP_APP
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Voulez-Vous Sortir?", "Gestion Restaurant", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if(MessageBox.Show("Voulez-Vous Sortir?", "Restaurantly", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
