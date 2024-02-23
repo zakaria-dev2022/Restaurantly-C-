@@ -29,257 +29,190 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.lb_message = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.lb_evenement = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lb_reservation = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lb_produit = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lb_employe = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pc_message = new System.Windows.Forms.PictureBox();
+            this.pc_evenement = new System.Windows.Forms.PictureBox();
+            this.pc_reservation = new System.Windows.Forms.PictureBox();
+            this.parametre = new System.Windows.Forms.PictureBox();
+            this.pc_produit = new System.Windows.Forms.PictureBox();
+            this.pc_employe = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.deconncter = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pc_message)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pc_evenement)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pc_reservation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parametre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pc_produit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pc_employe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(244, 719);
+            this.panel1.Size = new System.Drawing.Size(252, 624);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Black;
+            this.panel9.Controls.Add(this.pc_message);
+            this.panel9.Controls.Add(this.lb_message);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 422);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(252, 68);
+            this.panel9.TabIndex = 8;
+            // 
+            // lb_message
+            // 
+            this.lb_message.AutoSize = true;
+            this.lb_message.BackColor = System.Drawing.Color.Black;
+            this.lb_message.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lb_message.ForeColor = System.Drawing.Color.White;
+            this.lb_message.Location = new System.Drawing.Point(74, 18);
+            this.lb_message.Name = "lb_message";
+            this.lb_message.Size = new System.Drawing.Size(107, 28);
+            this.lb_message.TabIndex = 0;
+            this.lb_message.Text = "Message";
+            this.lb_message.Click += new System.EventHandler(this.lb_message_Click);
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Controls.Add(this.label6);
-            this.panel8.Controls.Add(this.pictureBox7);
+            this.panel8.Controls.Add(this.pc_evenement);
+            this.panel8.Controls.Add(this.lb_evenement);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 421);
+            this.panel8.Location = new System.Drawing.Point(0, 354);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(244, 73);
+            this.panel8.Size = new System.Drawing.Size(252, 68);
             this.panel8.TabIndex = 7;
             // 
-            // label6
+            // lb_evenement
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Black;
-            this.label6.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(85, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 28);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Evenement";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::OOP_APP.Properties.Resources.Design_sans_titre__7_;
-            this.pictureBox7.Location = new System.Drawing.Point(-9, 12);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(128, 61);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 1;
-            this.pictureBox7.TabStop = false;
+            this.lb_evenement.AutoSize = true;
+            this.lb_evenement.BackColor = System.Drawing.Color.Black;
+            this.lb_evenement.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lb_evenement.ForeColor = System.Drawing.Color.White;
+            this.lb_evenement.Location = new System.Drawing.Point(73, 18);
+            this.lb_evenement.Name = "lb_evenement";
+            this.lb_evenement.Size = new System.Drawing.Size(131, 28);
+            this.lb_evenement.TabIndex = 0;
+            this.lb_evenement.Text = "Evenement";
+            this.lb_evenement.Click += new System.EventHandler(this.lb_evenement_Click);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.pictureBox4);
+            this.panel6.Controls.Add(this.pc_reservation);
+            this.panel6.Controls.Add(this.lb_reservation);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 348);
+            this.panel6.Location = new System.Drawing.Point(0, 286);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(244, 73);
+            this.panel6.Size = new System.Drawing.Size(252, 68);
             this.panel6.TabIndex = 6;
             // 
-            // label4
+            // lb_reservation
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Black;
-            this.label4.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(85, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 28);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Reservation";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::OOP_APP.Properties.Resources.Design_sans_titre__7_;
-            this.pictureBox4.Location = new System.Drawing.Point(-9, 12);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(128, 61);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
+            this.lb_reservation.AutoSize = true;
+            this.lb_reservation.BackColor = System.Drawing.Color.Black;
+            this.lb_reservation.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lb_reservation.ForeColor = System.Drawing.Color.White;
+            this.lb_reservation.Location = new System.Drawing.Point(73, 19);
+            this.lb_reservation.Name = "lb_reservation";
+            this.lb_reservation.Size = new System.Drawing.Size(143, 28);
+            this.lb_reservation.TabIndex = 0;
+            this.lb_reservation.Text = "Reservation";
+            this.lb_reservation.Click += new System.EventHandler(this.lb_reservation_Click);
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Black;
-            this.panel7.Controls.Add(this.label5);
-            this.panel7.Controls.Add(this.pictureBox6);
+            this.panel7.Controls.Add(this.deconncter);
+            this.panel7.Controls.Add(this.parametre);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 646);
+            this.panel7.Location = new System.Drawing.Point(0, 556);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(244, 73);
+            this.panel7.Size = new System.Drawing.Size(252, 68);
             this.panel7.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Black;
-            this.label5.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(85, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 28);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Parametre";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::OOP_APP.Properties.Resources.Design_sans_titre__10_;
-            this.pictureBox6.Location = new System.Drawing.Point(12, 21);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(82, 49);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.pictureBox3);
+            this.panel5.Controls.Add(this.pc_produit);
+            this.panel5.Controls.Add(this.lb_produit);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 275);
+            this.panel5.Location = new System.Drawing.Point(0, 218);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(244, 73);
+            this.panel5.Size = new System.Drawing.Size(252, 68);
             this.panel5.TabIndex = 3;
             // 
-            // label3
+            // lb_produit
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(85, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 28);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Produits";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::OOP_APP.Properties.Resources.Design_sans_titre__7_;
-            this.pictureBox3.Location = new System.Drawing.Point(-9, 12);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(128, 61);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.lb_produit.AutoSize = true;
+            this.lb_produit.BackColor = System.Drawing.Color.Black;
+            this.lb_produit.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lb_produit.ForeColor = System.Drawing.Color.White;
+            this.lb_produit.Location = new System.Drawing.Point(74, 19);
+            this.lb_produit.Name = "lb_produit";
+            this.lb_produit.Size = new System.Drawing.Size(102, 28);
+            this.lb_produit.TabIndex = 0;
+            this.lb_produit.Text = "Produits";
+            this.lb_produit.Click += new System.EventHandler(this.lb_produit_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Controls.Add(this.pc_employe);
+            this.panel4.Controls.Add(this.lb_employe);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 202);
+            this.panel4.Location = new System.Drawing.Point(0, 150);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(244, 73);
+            this.panel4.Size = new System.Drawing.Size(252, 68);
             this.panel4.TabIndex = 2;
             // 
-            // label2
+            // lb_employe
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(85, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 28);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Employes";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::OOP_APP.Properties.Resources.Design_sans_titre__8_;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(116, 61);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 129);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(244, 73);
-            this.panel3.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(85, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Dashboard";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::OOP_APP.Properties.Resources.Design_sans_titre__7_;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 61);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.lb_employe.AutoSize = true;
+            this.lb_employe.BackColor = System.Drawing.Color.Black;
+            this.lb_employe.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lb_employe.ForeColor = System.Drawing.Color.White;
+            this.lb_employe.Location = new System.Drawing.Point(74, 12);
+            this.lb_employe.Name = "lb_employe";
+            this.lb_employe.Size = new System.Drawing.Size(116, 28);
+            this.lb_employe.TabIndex = 0;
+            this.lb_employe.Text = "Employes";
+            this.lb_employe.Click += new System.EventHandler(this.lb_employe_Click);
             // 
             // panel2
             // 
@@ -288,8 +221,74 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(244, 129);
+            this.panel2.Size = new System.Drawing.Size(252, 150);
             this.panel2.TabIndex = 0;
+            // 
+            // pc_message
+            // 
+            this.pc_message.Image = global::OOP_APP.Properties.Resources.email__2_;
+            this.pc_message.Location = new System.Drawing.Point(7, 6);
+            this.pc_message.Name = "pc_message";
+            this.pc_message.Size = new System.Drawing.Size(61, 40);
+            this.pc_message.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pc_message.TabIndex = 5;
+            this.pc_message.TabStop = false;
+            this.pc_message.Click += new System.EventHandler(this.pc_message_Click);
+            // 
+            // pc_evenement
+            // 
+            this.pc_evenement.Image = global::OOP_APP.Properties.Resources.party__1_;
+            this.pc_evenement.Location = new System.Drawing.Point(7, 6);
+            this.pc_evenement.Name = "pc_evenement";
+            this.pc_evenement.Size = new System.Drawing.Size(61, 40);
+            this.pc_evenement.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pc_evenement.TabIndex = 5;
+            this.pc_evenement.TabStop = false;
+            this.pc_evenement.Click += new System.EventHandler(this.pc_evenement_Click);
+            // 
+            // pc_reservation
+            // 
+            this.pc_reservation.Image = global::OOP_APP.Properties.Resources.reserved;
+            this.pc_reservation.Location = new System.Drawing.Point(7, 7);
+            this.pc_reservation.Name = "pc_reservation";
+            this.pc_reservation.Size = new System.Drawing.Size(61, 40);
+            this.pc_reservation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pc_reservation.TabIndex = 5;
+            this.pc_reservation.TabStop = false;
+            this.pc_reservation.Click += new System.EventHandler(this.pc_reservation_Click);
+            // 
+            // parametre
+            // 
+            this.parametre.Dock = System.Windows.Forms.DockStyle.Right;
+            this.parametre.Image = global::OOP_APP.Properties.Resources.Design_sans_titre__10_;
+            this.parametre.Location = new System.Drawing.Point(170, 0);
+            this.parametre.Name = "parametre";
+            this.parametre.Size = new System.Drawing.Size(82, 68);
+            this.parametre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.parametre.TabIndex = 1;
+            this.parametre.TabStop = false;
+            // 
+            // pc_produit
+            // 
+            this.pc_produit.Image = global::OOP_APP.Properties.Resources.product;
+            this.pc_produit.Location = new System.Drawing.Point(7, 7);
+            this.pc_produit.Name = "pc_produit";
+            this.pc_produit.Size = new System.Drawing.Size(61, 40);
+            this.pc_produit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pc_produit.TabIndex = 5;
+            this.pc_produit.TabStop = false;
+            this.pc_produit.Click += new System.EventHandler(this.pc_produit_Click);
+            // 
+            // pc_employe
+            // 
+            this.pc_employe.Image = global::OOP_APP.Properties.Resources.user__1_;
+            this.pc_employe.Location = new System.Drawing.Point(7, 7);
+            this.pc_employe.Name = "pc_employe";
+            this.pc_employe.Size = new System.Drawing.Size(61, 40);
+            this.pc_employe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pc_employe.TabIndex = 4;
+            this.pc_employe.TabStop = false;
+            this.pc_employe.Click += new System.EventHandler(this.pc_employe_Click);
             // 
             // pictureBox5
             // 
@@ -297,16 +296,28 @@
             this.pictureBox5.Image = global::OOP_APP.Properties.Resources.restaurantly;
             this.pictureBox5.Location = new System.Drawing.Point(0, 0);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(244, 129);
+            this.pictureBox5.Size = new System.Drawing.Size(252, 150);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
+            // 
+            // deconncter
+            // 
+            this.deconncter.AutoSize = true;
+            this.deconncter.BackColor = System.Drawing.Color.Black;
+            this.deconncter.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.deconncter.ForeColor = System.Drawing.Color.White;
+            this.deconncter.Location = new System.Drawing.Point(12, 20);
+            this.deconncter.Name = "deconncter";
+            this.deconncter.Size = new System.Drawing.Size(150, 28);
+            this.deconncter.TabIndex = 2;
+            this.deconncter.Text = "Déconnecter";
             // 
             // dashbord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 719);
+            this.ClientSize = new System.Drawing.Size(1104, 624);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "dashbord";
@@ -314,25 +325,25 @@
             this.Text = "dashbord";
             this.Load += new System.EventHandler(this.dashbord_Load);
             this.panel1.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pc_message)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pc_evenement)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pc_reservation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parametre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pc_produit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pc_employe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
@@ -341,25 +352,25 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lb_produit;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lb_employe;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox parametre;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label lb_evenement;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label lb_reservation;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label lb_message;
+        private System.Windows.Forms.PictureBox pc_employe;
+        private System.Windows.Forms.PictureBox pc_message;
+        private System.Windows.Forms.PictureBox pc_evenement;
+        private System.Windows.Forms.PictureBox pc_reservation;
+        private System.Windows.Forms.PictureBox pc_produit;
+        private System.Windows.Forms.Label deconncter;
     }
 }

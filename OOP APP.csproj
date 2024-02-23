@@ -110,6 +110,24 @@
       <DependentUpon>dashbord.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs" />
+    <Compile Include="formEvenement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEvenement.Designer.cs">
+      <DependentUpon>formEvenement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMessage.Designer.cs">
+      <DependentUpon>formMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formReservation.Designer.cs">
+      <DependentUpon>formReservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="interface.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +233,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\restaurantly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\party.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reserved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\party %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
