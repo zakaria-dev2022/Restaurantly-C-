@@ -26,7 +26,8 @@ namespace OOP_APP
         {
             Utils.CloseConnection();
             //Connection dbOperations = new Connection();
-            DataTable dataTable = Utils.ObtenirDonnees("select * from produit");
+            DataTable dataTable = Utils.ObtenirDonnees("select p.id as N°Produit,p.libelle,p.prix,p.description,t.type,p.image from produit p JOIN type_produits t on p.id_type_produit = t.id");
+            //DataTable dataTable = Utils.ObtenirDonnees("select * from produit");
             // Lier le DataTable au DataGridView
             tableau.DataSource = dataTable;
 
@@ -61,6 +62,7 @@ namespace OOP_APP
                 string texte = row["type"].ToString(); // Remplacez "colonne_texte" par le nom de votre colonne
                 //txttp.Items.AppendText(texte + Environment.NewLine);
                 txttp.Items.Add(texte);
+                
             }
 
 
@@ -71,7 +73,7 @@ namespace OOP_APP
             remplir_txttp();
             remplir();
             //panel_type_produit.Visible = false;
-            panel_produit.Visible = true;
+            //panel_produit.Visible = true;
         }
         void nouveau()
         {
@@ -84,85 +86,9 @@ namespace OOP_APP
             txtl.Focus();
         }
 
-        private void Ajouter_Click(object sender, EventArgs e)
-        {
-            int id_type_produit = TransferTypeInt();
-            
-             Produits produit = new Produits(txtl.Text,float.Parse(txtp.Text), txtdp.Text, id_type_produit, chemin_Img.Text);
-              Produits.ajouterProduit(produit);
-              nouveau();
-              //Connection.CloseConnection();
-              remplir();
-              Ajouter.Enabled = true;
-              Modifier.Enabled = false;
-              Suprimer.Enabled = false;
-
-        }
-
-        private void Suprimer_Click(object sender, EventArgs e)
-        {
-            Utils.CloseConnection();
-            if (MessageBox.Show("Voulez-vous suprimer Ce Produit?", "Gestion Restaurant", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Utils.SuprimerDonner("produit", txtid.Text);
-                MessageBox.Show("Supression Avec Success");
-                remplir();
-                nouveau();
-                Ajouter.Enabled = true;
-                Modifier.Enabled = false;
-                Suprimer.Enabled = false;
-            }
-        }
-
-        private void Modifier_Click(object sender, EventArgs e)
-        {
-            int id_type_produit = TransferTypeInt();
-            Produits produit = new Produits(txtl.Text, float.Parse(txtp.Text), txtdp.Text, id_type_produit, chemin_Img.Text);
-            int id = int.Parse(txtid.Text);
-            Produits.ModifierProduits(produit, id);
-            nouveau();
-            remplir();
-            Ajouter.Enabled = true;
-            Modifier.Enabled = false;
-            Suprimer.Enabled = false;
-        }
-
-        private void upload_Click(object sender, EventArgs e)
-        {
-            ofd.Filter = "JPG files(*.jpg)|*.jpg|PNG files(*.png)|*.png | all files(*.*)|*.*";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                var fileinfo = new FileInfo(ofd.FileName);
-                Image img = Image.FromFile(ofd.FileName);
-                string typeFile = Path.GetExtension(ofd.FileName);
-                img_produit.Image = img;
-                chemin = $"{DateTime.Now:yyyy_MM_dd HH-mm-ss} -" + txtl.Text + " De Type "+ txttp.Text + typeFile;
-                chemin_Img.Text = chemin;
-                //chemin =txtmt.Text + " Photo voiture" : typeFile;
-                //File.Copy(fileinfo.FullName, Application.StartupPath + "/img_client/" + chemin);
-                File.Copy(fileinfo.FullName, @"C:\laragon\www\Restaurantly\assets\img\menu\" + chemin);
-
-            }
-        }
-
         private void tableau_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) 
-            {
-                DataGridViewRow row = tableau.Rows[e.RowIndex];
-                txtid.Text = row.Cells["id"].Value.ToString();
-                txtl.Text = row.Cells["libelle"].Value.ToString();
-                txtp.Text = row.Cells["prix"].Value.ToString();
-                txtdp.Text = row.Cells["description"].Value.ToString();
-                string id_type_produit = row.Cells["id_type_produit"].Value.ToString();
-               string type_produit=TransferTypeString(id_type_produit);
-                txttp.Text = type_produit;
-                chemin_Img.Text = row.Cells["image"].Value.ToString();
-                img_produit.Load(@"C:\laragon\www\Restaurantly\assets\img\menu\" + chemin_Img.Text);
-                Ajouter.Enabled = false;
-                Modifier.Enabled = true;
-                Suprimer.Enabled = true;
-            }
+           
         }
         public string TransferTypeString(string id_type_produit)
         {
@@ -193,9 +119,148 @@ namespace OOP_APP
            
         }
 
-        private void panel_produit_Paint(object sender, PaintEventArgs e)
-        {
+        
 
+        private void exit_Click(object sender, EventArgs e)
+        {
+            dashbord dashbord = new dashbord();
+            this.Hide();
+            dashbord.Show();
+        }
+
+      
+
+        private void Ajouter_Click_2(object sender, EventArgs e)
+        {
+            int id_type_produit = TransferTypeInt();
+
+            Produits produit = new Produits(txtl.Text, float.Parse(txtp.Text), txtdp.Text, id_type_produit, chemin_Img.Text);
+            Produits.ajouterProduit(produit);
+            nouveau();
+            //Connection.CloseConnection();
+            remplir();
+            Ajouter.Enabled = true;
+            Modifier.Enabled = false;
+            Suprimer.Enabled = false;
+        }
+
+        private void Modifier_Click_1(object sender, EventArgs e)
+        {
+            int id_type_produit = TransferTypeInt();
+            Produits produit = new Produits(txtl.Text, float.Parse(txtp.Text), txtdp.Text, id_type_produit, chemin_Img.Text);
+            int id = int.Parse(txtid.Text);
+            Produits.ModifierProduits(produit, id);
+            nouveau();
+            remplir();
+            Ajouter.Enabled = true;
+            Modifier.Enabled = false;
+            Suprimer.Enabled = false;
+        }
+
+        private void Suprimer_Click_1(object sender, EventArgs e)
+        {
+            Utils.CloseConnection();
+            if (MessageBox.Show("Voulez-vous suprimer Ce Produit?", "Gestion Restaurant", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Utils.SuprimerDonner("produit", txtid.Text);
+                MessageBox.Show("Supression Avec Success");
+                remplir();
+                nouveau();
+                Ajouter.Enabled = true;
+                Modifier.Enabled = false;
+                Suprimer.Enabled = false;
+            }
+        }
+
+        private void inport_photo_Click(object sender, EventArgs e)
+        {
+            ofd.Filter = "JPG files(*.jpg)|*.jpg|PNG files(*.png)|*.png | all files(*.*)|*.*";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                var fileinfo = new FileInfo(ofd.FileName);
+                Image img = Image.FromFile(ofd.FileName);
+                string typeFile = Path.GetExtension(ofd.FileName);
+                img_produit.Image = img;
+                chemin = $"{DateTime.Now:yyyy_MM_dd HH-mm-ss} -" + txtl.Text + " De Type " + txttp.Text + typeFile;
+                chemin_Img.Text = chemin;
+                //chemin =txtmt.Text + " Photo voiture" : typeFile;
+                //File.Copy(fileinfo.FullName, Application.StartupPath + "/img_client/" + chemin);
+                File.Copy(fileinfo.FullName, @"C:\laragon\www\Restaurantly\assets\img\menu\" + chemin);
+
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (lb_type.Visible == true)
+            {
+                lb_type.Visible = false;
+                ajouter_type.Visible = false;
+               // annuler_type.Visible = false;
+                txtntp.Visible = false;
+                Ajouter.Enabled = true;
+                Modifier.Enabled = false;
+                Suprimer.Enabled = false;
+                inport_photo.Enabled = true;
+                txtl.ReadOnly= true;
+                txtp.ReadOnly= true;
+                txtdp.ReadOnly= true;
+               
+            }
+            else
+            {
+            lb_type.Visible = true;
+            ajouter_type.Visible = true;
+            //annuler_type.Visible = true;
+            txtntp.Visible = true;
+            Ajouter.Enabled = false;
+            Modifier.Enabled=false;
+            Suprimer.Enabled = false;
+            inport_photo.Enabled = false;
+                txtl.ReadOnly = false;
+                txtp.ReadOnly = false;
+                txtdp.ReadOnly = false;
+            }
+        }
+
+        private void ajouter_type_Click(object sender, EventArgs e)
+        {
+            if (txtntp.Text!="")
+            { 
+            string type = txtntp.Text;
+            Produits.ajouterTypeProduit(type);
+                txtntp.Text = "";
+                txtntp.Focus();
+                Utils.CloseConnection();
+                // remplir_txttp();
+                txttp.Items.Clear();
+                remplir_txttp();
+            }
+            else
+            {
+                MessageBox.Show("Entrer Votre Nouveaux Type", "Restaurantly");
+            }
+        }
+
+        private void tableau_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = tableau.Rows[e.RowIndex];
+                txtid.Text = row.Cells["N°Produit"].Value.ToString();
+                txtl.Text = row.Cells["libelle"].Value.ToString();
+                txtp.Text = row.Cells["prix"].Value.ToString();
+                txtdp.Text = row.Cells["description"].Value.ToString();
+               // string id_type_produit = row.Cells["type"].Value.ToString();
+                //string type_produit = TransferTypeString(id_type_produit);
+                //txttp.Text = type_produit;
+                txttp.Text = row.Cells["type"].Value.ToString();
+                string cheminimg = row.Cells["image"].Value.ToString();
+                img_produit.Load(@"C:\laragon\www\Restaurantly\assets\img\menu\" + cheminimg);
+                Ajouter.Enabled = false;
+                Modifier.Enabled = true;
+                Suprimer.Enabled = true;
+            }
         }
     }
 }

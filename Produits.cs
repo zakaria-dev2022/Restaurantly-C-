@@ -57,6 +57,28 @@ namespace OOP_APP
                 MessageBox.Show($"Erreur ajoute avec success: {ex.Message} ", "Gestion Restaurant");
             }
         }
+        public static void ajouterTypeProduit( string type)
+        {
+            try
+            {
+
+                Utils.OpenConnection();
+
+                string query = "INSERT INTO type_produits (type) VALUES (@type)";
+
+                MySqlCommand command = new MySqlCommand(query, Utils.cnx);
+                {
+                    command.Parameters.AddWithValue("@type", type);
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Ajouter Le Type "+ type+" avec success","Gestion Restaurant");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur ajoute avec success: {ex.Message} ", "Gestion Restaurant");
+            }
+        }
 
         public static void ModifierProduits(Produits produit, int id)
         {

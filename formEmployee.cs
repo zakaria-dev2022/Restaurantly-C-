@@ -1,4 +1,5 @@
-﻿using MySqlX.XDevAPI;
+﻿using Google.Protobuf.WellKnownTypes;
+using MySqlX.XDevAPI;
 using pratique;
 using System;
 using System.Collections.Generic;
@@ -55,12 +56,6 @@ namespace OOP_APP
 
         }
 
-        private void Ajouter_Click(object sender, EventArgs e)
-        {
-           
-            
-        }
-
         private void Suprimer_Click(object sender, EventArgs e)
         {
             Utils.CloseConnection();
@@ -79,8 +74,9 @@ namespace OOP_APP
 
         private void Modifier_Click(object sender, EventArgs e)
         {
-            
-            Employee employee = new Employee(txtn.Text, txtp.Text, txtcn.Text, txtt.Text, txtmt.Text, txtpt.Text, lb_photo.Text);
+            if (txtn.Text != "" && txtp.Text != "" && txtcn.Text != "" && txtt.Text != "" && txtmt.Text != "" && txtpt.Text != "" && photo.Image != null)
+            {
+                Employee employee = new Employee(txtn.Text, txtp.Text, txtcn.Text, txtt.Text, txtmt.Text, txtpt.Text, lb_photo.Text);
             int id = int.Parse(txtid.Text);
             Employee.Modifieremployee(employee,id);
             nouveau();
@@ -89,10 +85,11 @@ namespace OOP_APP
             Modifier.Enabled = false;
             Suprimer.Enabled = false;
         }
+        }
 
         private void tableau_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex > 0)
             {
                 DataGridViewRow row = tableau.Rows[e.RowIndex];
                 txtid.Text = row.Cells["id"].Value.ToString();
@@ -107,6 +104,10 @@ namespace OOP_APP
                 Ajouter.Enabled = false;
                 Modifier.Enabled = true;
                 Suprimer.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Aucun Element Selectionner", "Restaurantly");
             }
         }
 
@@ -135,11 +136,20 @@ namespace OOP_APP
 
         private void Ajouter_Click_1(object sender, EventArgs e)
         {
+            if (txtn.Text != "" && txtp.Text != "" && txtcn.Text != "" && txtt.Text != "" && txtmt.Text != "" && txtpt.Text != "" && photo.Image != null)
+            {
+                
+            
             Employee employee = new Employee(txtn.Text, txtp.Text, txtcn.Text, txtt.Text, txtmt.Text, txtpt.Text, lb_photo.Text);
             Employee.ajouterEmploye(employee);
             nouveau();
             //Connection.CloseConnection();
             remplir();
+            }
+            else
+            {
+                MessageBox.Show("Verifier Votre Donner", "Restaurantly");
+            }
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -149,6 +159,8 @@ namespace OOP_APP
                 dashbord.Show();
 
         }
+
+        
         
     }
 }
