@@ -1,6 +1,5 @@
 ﻿using Google.Protobuf.WellKnownTypes;
 using MySqlX.XDevAPI;
-using pratique;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -89,7 +88,7 @@ namespace OOP_APP
 
         private void tableau_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > 0)
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = tableau.Rows[e.RowIndex];
                 txtid.Text = row.Cells["id"].Value.ToString();
@@ -108,6 +107,9 @@ namespace OOP_APP
             else
             {
                 MessageBox.Show("Aucun Element Selectionner", "Restaurantly");
+                Ajouter.Enabled = true;
+                Modifier.Enabled = false;
+                Suprimer.Enabled = false;
             }
         }
 

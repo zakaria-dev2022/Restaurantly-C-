@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace OOP_APP
@@ -100,6 +101,20 @@ namespace OOP_APP
             formMessage message = new formMessage();
             this.Hide();
             message.Show();
+        }
+
+        private void deconncter_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
+        }
+
+        private void parametre_Click(object sender, EventArgs e)
+        {
+            Setting setting = new Setting();
+            this.Hide();
+            setting.Show();
         }
     }
 }

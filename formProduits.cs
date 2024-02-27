@@ -55,6 +55,7 @@ namespace OOP_APP
         
         public void remplir_txttp()
         {
+            Utils.CloseConnection();
             //remplir txttp depuis la base de donner
             DataTable dataTable = Utils.ObtenirDonnees("select * from type_produits");
             foreach (DataRow row in dataTable.Rows)
@@ -70,6 +71,7 @@ namespace OOP_APP
 
         private void formProduits_Load(object sender, EventArgs e)
         {
+            Utils.CloseConnection();
             remplir_txttp();
             remplir();
             //panel_type_produit.Visible = false;
@@ -77,6 +79,7 @@ namespace OOP_APP
         }
         void nouveau()
         {
+            Utils.CloseConnection();
             txtl.Text = "";
             txtp.Text = "";
             txtdp.Text = "";
@@ -84,6 +87,7 @@ namespace OOP_APP
             chemin_Img.Text = "";
             img_produit.Image = null;
             txtl.Focus();
+            
         }
 
         private void tableau_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -111,13 +115,7 @@ namespace OOP_APP
             throw new Exception("Aucune donnée trouvée pour le type de produit : " + txttp.Text);
         }
 
-        private void btn_ajouter_type_produit_Click(object sender, EventArgs e)
-        {
-            formTypeProduit formtp = new formTypeProduit();
-            formtp.Show();
-            this.Hide();
-           
-        }
+        
 
         
 
@@ -132,8 +130,8 @@ namespace OOP_APP
 
         private void Ajouter_Click_2(object sender, EventArgs e)
         {
+            Utils.CloseConnection();
             int id_type_produit = TransferTypeInt();
-
             Produits produit = new Produits(txtl.Text, float.Parse(txtp.Text), txtdp.Text, id_type_produit, chemin_Img.Text);
             Produits.ajouterProduit(produit);
             nouveau();
@@ -146,6 +144,7 @@ namespace OOP_APP
 
         private void Modifier_Click_1(object sender, EventArgs e)
         {
+            Utils.CloseConnection();
             int id_type_produit = TransferTypeInt();
             Produits produit = new Produits(txtl.Text, float.Parse(txtp.Text), txtdp.Text, id_type_produit, chemin_Img.Text);
             int id = int.Parse(txtid.Text);
@@ -226,8 +225,9 @@ namespace OOP_APP
         private void ajouter_type_Click(object sender, EventArgs e)
         {
             if (txtntp.Text!="")
-            { 
-            string type = txtntp.Text;
+            {
+                Utils.CloseConnection();
+                string type = txtntp.Text;
             Produits.ajouterTypeProduit(type);
                 txtntp.Text = "";
                 txtntp.Focus();
@@ -244,6 +244,7 @@ namespace OOP_APP
 
         private void tableau_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            Utils.CloseConnection();
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = tableau.Rows[e.RowIndex];
@@ -261,6 +262,33 @@ namespace OOP_APP
                 Modifier.Enabled = true;
                 Suprimer.Enabled = true;
             }
+            else
+            {
+                MessageBox.Show("Aucun Element Selectionner", "Restaurantly");
+                Ajouter.Enabled = true;
+                Modifier.Enabled = false;
+                Suprimer.Enabled = false;
+            }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void img_produit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableau_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void chemin_Img_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.exit = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -44,8 +46,6 @@
             this.chemin_Img = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.img_produit = new System.Windows.Forms.PictureBox();
-            this.exit = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.inport_photo = new Guna.UI2.WinForms.Guna2Button();
             this.Ajouter = new Guna.UI2.WinForms.Guna2Button();
             this.Suprimer = new Guna.UI2.WinForms.Guna2Button();
@@ -56,11 +56,11 @@
             this.txtntp = new System.Windows.Forms.TextBox();
             this.ajouter_type = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableau)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_produit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +76,17 @@
             this.panel1.Size = new System.Drawing.Size(1126, 102);
             this.panel1.TabIndex = 66;
             // 
+            // exit
+            // 
+            this.exit.Image = global::OOP_APP.Properties.Resources.cross;
+            this.exit.Location = new System.Drawing.Point(1027, 19);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(61, 70);
+            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.exit.TabIndex = 46;
+            this.exit.TabStop = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -86,6 +97,16 @@
             this.label5.Size = new System.Drawing.Size(485, 56);
             this.label5.TabIndex = 45;
             this.label5.Text = "Gestion Des Produits";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::OOP_APP.Properties.Resources.product;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 77);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label11
             // 
@@ -130,6 +151,7 @@
             this.label8.Size = new System.Drawing.Size(78, 26);
             this.label8.TabIndex = 90;
             this.label8.Text = "Image";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label4
             // 
@@ -169,6 +191,7 @@
             this.tableau.Size = new System.Drawing.Size(895, 225);
             this.tableau.TabIndex = 80;
             this.tableau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableau_CellClick_1);
+            this.tableau.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableau_CellContentClick);
             // 
             // txtp
             // 
@@ -202,6 +225,7 @@
             this.chemin_Img.TabIndex = 87;
             this.chemin_Img.Text = "chemin_Img";
             this.chemin_Img.Visible = false;
+            this.chemin_Img.Click += new System.EventHandler(this.chemin_Img_Click);
             // 
             // pictureBox2
             // 
@@ -223,27 +247,7 @@
             this.img_produit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_produit.TabIndex = 84;
             this.img_produit.TabStop = false;
-            // 
-            // exit
-            // 
-            this.exit.Image = global::OOP_APP.Properties.Resources.cross;
-            this.exit.Location = new System.Drawing.Point(1027, 19);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(61, 70);
-            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.exit.TabIndex = 46;
-            this.exit.TabStop = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::OOP_APP.Properties.Resources.product;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.img_produit.Click += new System.EventHandler(this.img_produit_Click);
             // 
             // inport_photo
             // 
@@ -410,11 +414,11 @@
             this.Load += new System.EventHandler(this.formProduits_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableau)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_produit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

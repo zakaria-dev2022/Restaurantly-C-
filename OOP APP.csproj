@@ -103,6 +103,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin.cs" />
     <Compile Include="dashbord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +111,7 @@
       <DependentUpon>dashbord.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs" />
+    <Compile Include="evenement.cs" />
     <Compile Include="formEvenement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,17 +148,17 @@
     <Compile Include="formProduits.Designer.cs">
       <DependentUpon>formProduits.cs</DependentUpon>
     </Compile>
-    <Compile Include="formTypeProduit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formTypeProduit.Designer.cs">
-      <DependentUpon>formTypeProduit.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
     </Compile>
     <Compile Include="Produits.cs" />
     <Compile Include="Program.cs" />
@@ -164,6 +166,9 @@
     <Compile Include="Utils.cs" />
     <EmbeddedResource Include="dashbord.resx">
       <DependentUpon>dashbord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEvenement.resx">
+      <DependentUpon>formEvenement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="interface.resx">
       <DependentUpon>interface.cs</DependentUpon>
@@ -173,9 +178,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formProduits.resx">
       <DependentUpon>formProduits.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formTypeProduit.resx">
-      <DependentUpon>formTypeProduit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -190,6 +192,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -269,6 +274,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

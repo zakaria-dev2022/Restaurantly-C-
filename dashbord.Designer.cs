@@ -30,39 +30,39 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.pc_message = new System.Windows.Forms.PictureBox();
             this.lb_message = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.pc_evenement = new System.Windows.Forms.PictureBox();
             this.lb_evenement = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pc_reservation = new System.Windows.Forms.PictureBox();
             this.lb_reservation = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.deconncter = new System.Windows.Forms.Label();
+            this.parametre = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pc_produit = new System.Windows.Forms.PictureBox();
             this.lb_produit = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pc_employe = new System.Windows.Forms.PictureBox();
             this.lb_employe = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pc_message = new System.Windows.Forms.PictureBox();
-            this.pc_evenement = new System.Windows.Forms.PictureBox();
-            this.pc_reservation = new System.Windows.Forms.PictureBox();
-            this.parametre = new System.Windows.Forms.PictureBox();
-            this.pc_produit = new System.Windows.Forms.PictureBox();
-            this.pc_employe = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.deconncter = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pc_message)).BeginInit();
+            this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pc_evenement)).BeginInit();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pc_reservation)).BeginInit();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parametre)).BeginInit();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pc_produit)).BeginInit();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pc_employe)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +94,17 @@
             this.panel9.Size = new System.Drawing.Size(252, 68);
             this.panel9.TabIndex = 8;
             // 
+            // pc_message
+            // 
+            this.pc_message.Image = global::OOP_APP.Properties.Resources.email__2_;
+            this.pc_message.Location = new System.Drawing.Point(7, 6);
+            this.pc_message.Name = "pc_message";
+            this.pc_message.Size = new System.Drawing.Size(61, 40);
+            this.pc_message.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pc_message.TabIndex = 5;
+            this.pc_message.TabStop = false;
+            this.pc_message.Click += new System.EventHandler(this.pc_message_Click);
+            // 
             // lb_message
             // 
             this.lb_message.AutoSize = true;
@@ -117,6 +128,17 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(252, 68);
             this.panel8.TabIndex = 7;
+            // 
+            // pc_evenement
+            // 
+            this.pc_evenement.Image = global::OOP_APP.Properties.Resources.party__1_;
+            this.pc_evenement.Location = new System.Drawing.Point(7, 6);
+            this.pc_evenement.Name = "pc_evenement";
+            this.pc_evenement.Size = new System.Drawing.Size(61, 40);
+            this.pc_evenement.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pc_evenement.TabIndex = 5;
+            this.pc_evenement.TabStop = false;
+            this.pc_evenement.Click += new System.EventHandler(this.pc_evenement_Click);
             // 
             // lb_evenement
             // 
@@ -142,6 +164,17 @@
             this.panel6.Size = new System.Drawing.Size(252, 68);
             this.panel6.TabIndex = 6;
             // 
+            // pc_reservation
+            // 
+            this.pc_reservation.Image = global::OOP_APP.Properties.Resources.reserved;
+            this.pc_reservation.Location = new System.Drawing.Point(7, 7);
+            this.pc_reservation.Name = "pc_reservation";
+            this.pc_reservation.Size = new System.Drawing.Size(61, 40);
+            this.pc_reservation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pc_reservation.TabIndex = 5;
+            this.pc_reservation.TabStop = false;
+            this.pc_reservation.Click += new System.EventHandler(this.pc_reservation_Click);
+            // 
             // lb_reservation
             // 
             this.lb_reservation.AutoSize = true;
@@ -166,6 +199,31 @@
             this.panel7.Size = new System.Drawing.Size(252, 68);
             this.panel7.TabIndex = 5;
             // 
+            // deconncter
+            // 
+            this.deconncter.AutoSize = true;
+            this.deconncter.BackColor = System.Drawing.Color.Black;
+            this.deconncter.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.deconncter.ForeColor = System.Drawing.Color.White;
+            this.deconncter.Location = new System.Drawing.Point(12, 20);
+            this.deconncter.Name = "deconncter";
+            this.deconncter.Size = new System.Drawing.Size(150, 28);
+            this.deconncter.TabIndex = 2;
+            this.deconncter.Text = "Déconnecter";
+            this.deconncter.Click += new System.EventHandler(this.deconncter_Click);
+            // 
+            // parametre
+            // 
+            this.parametre.Dock = System.Windows.Forms.DockStyle.Right;
+            this.parametre.Image = global::OOP_APP.Properties.Resources.Design_sans_titre__10_;
+            this.parametre.Location = new System.Drawing.Point(170, 0);
+            this.parametre.Name = "parametre";
+            this.parametre.Size = new System.Drawing.Size(82, 68);
+            this.parametre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.parametre.TabIndex = 1;
+            this.parametre.TabStop = false;
+            this.parametre.Click += new System.EventHandler(this.parametre_Click);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Black;
@@ -176,6 +234,17 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(252, 68);
             this.panel5.TabIndex = 3;
+            // 
+            // pc_produit
+            // 
+            this.pc_produit.Image = global::OOP_APP.Properties.Resources.product;
+            this.pc_produit.Location = new System.Drawing.Point(7, 7);
+            this.pc_produit.Name = "pc_produit";
+            this.pc_produit.Size = new System.Drawing.Size(61, 40);
+            this.pc_produit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pc_produit.TabIndex = 5;
+            this.pc_produit.TabStop = false;
+            this.pc_produit.Click += new System.EventHandler(this.pc_produit_Click);
             // 
             // lb_produit
             // 
@@ -201,6 +270,17 @@
             this.panel4.Size = new System.Drawing.Size(252, 68);
             this.panel4.TabIndex = 2;
             // 
+            // pc_employe
+            // 
+            this.pc_employe.Image = global::OOP_APP.Properties.Resources.user__1_;
+            this.pc_employe.Location = new System.Drawing.Point(7, 7);
+            this.pc_employe.Name = "pc_employe";
+            this.pc_employe.Size = new System.Drawing.Size(61, 40);
+            this.pc_employe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pc_employe.TabIndex = 4;
+            this.pc_employe.TabStop = false;
+            this.pc_employe.Click += new System.EventHandler(this.pc_employe_Click);
+            // 
             // lb_employe
             // 
             this.lb_employe.AutoSize = true;
@@ -224,72 +304,6 @@
             this.panel2.Size = new System.Drawing.Size(252, 150);
             this.panel2.TabIndex = 0;
             // 
-            // pc_message
-            // 
-            this.pc_message.Image = global::OOP_APP.Properties.Resources.email__2_;
-            this.pc_message.Location = new System.Drawing.Point(7, 6);
-            this.pc_message.Name = "pc_message";
-            this.pc_message.Size = new System.Drawing.Size(61, 40);
-            this.pc_message.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pc_message.TabIndex = 5;
-            this.pc_message.TabStop = false;
-            this.pc_message.Click += new System.EventHandler(this.pc_message_Click);
-            // 
-            // pc_evenement
-            // 
-            this.pc_evenement.Image = global::OOP_APP.Properties.Resources.party__1_;
-            this.pc_evenement.Location = new System.Drawing.Point(7, 6);
-            this.pc_evenement.Name = "pc_evenement";
-            this.pc_evenement.Size = new System.Drawing.Size(61, 40);
-            this.pc_evenement.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pc_evenement.TabIndex = 5;
-            this.pc_evenement.TabStop = false;
-            this.pc_evenement.Click += new System.EventHandler(this.pc_evenement_Click);
-            // 
-            // pc_reservation
-            // 
-            this.pc_reservation.Image = global::OOP_APP.Properties.Resources.reserved;
-            this.pc_reservation.Location = new System.Drawing.Point(7, 7);
-            this.pc_reservation.Name = "pc_reservation";
-            this.pc_reservation.Size = new System.Drawing.Size(61, 40);
-            this.pc_reservation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pc_reservation.TabIndex = 5;
-            this.pc_reservation.TabStop = false;
-            this.pc_reservation.Click += new System.EventHandler(this.pc_reservation_Click);
-            // 
-            // parametre
-            // 
-            this.parametre.Dock = System.Windows.Forms.DockStyle.Right;
-            this.parametre.Image = global::OOP_APP.Properties.Resources.Design_sans_titre__10_;
-            this.parametre.Location = new System.Drawing.Point(170, 0);
-            this.parametre.Name = "parametre";
-            this.parametre.Size = new System.Drawing.Size(82, 68);
-            this.parametre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.parametre.TabIndex = 1;
-            this.parametre.TabStop = false;
-            // 
-            // pc_produit
-            // 
-            this.pc_produit.Image = global::OOP_APP.Properties.Resources.product;
-            this.pc_produit.Location = new System.Drawing.Point(7, 7);
-            this.pc_produit.Name = "pc_produit";
-            this.pc_produit.Size = new System.Drawing.Size(61, 40);
-            this.pc_produit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pc_produit.TabIndex = 5;
-            this.pc_produit.TabStop = false;
-            this.pc_produit.Click += new System.EventHandler(this.pc_produit_Click);
-            // 
-            // pc_employe
-            // 
-            this.pc_employe.Image = global::OOP_APP.Properties.Resources.user__1_;
-            this.pc_employe.Location = new System.Drawing.Point(7, 7);
-            this.pc_employe.Name = "pc_employe";
-            this.pc_employe.Size = new System.Drawing.Size(61, 40);
-            this.pc_employe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pc_employe.TabIndex = 4;
-            this.pc_employe.TabStop = false;
-            this.pc_employe.Click += new System.EventHandler(this.pc_employe_Click);
-            // 
             // pictureBox5
             // 
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -300,18 +314,6 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
-            // 
-            // deconncter
-            // 
-            this.deconncter.AutoSize = true;
-            this.deconncter.BackColor = System.Drawing.Color.Black;
-            this.deconncter.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
-            this.deconncter.ForeColor = System.Drawing.Color.White;
-            this.deconncter.Location = new System.Drawing.Point(12, 20);
-            this.deconncter.Name = "deconncter";
-            this.deconncter.Size = new System.Drawing.Size(150, 28);
-            this.deconncter.TabIndex = 2;
-            this.deconncter.Text = "Déconnecter";
             // 
             // dashbord
             // 
@@ -327,23 +329,23 @@
             this.panel1.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pc_message)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pc_evenement)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pc_reservation)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.parametre)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pc_produit)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pc_message)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pc_evenement)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pc_reservation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.parametre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pc_produit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc_employe)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 

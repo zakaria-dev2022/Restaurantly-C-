@@ -136,27 +136,3 @@ namespace OOP_APP
 
 
 
-
-
-
-
-
-
-
-namespace pratique
-{
-    internal class Connection
-    {
-       
-       
-
-
-
-
-
-
-
-
-
-    }
-}
