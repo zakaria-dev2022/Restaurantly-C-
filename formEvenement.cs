@@ -138,12 +138,7 @@ namespace OOP_APP
             {
                 MessageBox.Show("Aucun Element Selectionner", "Restaurantly");
                 txtid.Text = "";
-                txtt.Text = "";
-                txtp.Text = "";
-                txtdp.Text = "";
-                chemin_Img.Text = "";
-                img_evenement.Image = null;
-                txtt.Focus();
+                nouveau();
                 Ajouter.Enabled = true;
                 Modifier.Enabled = false;
                 Suprimer.Enabled = false;

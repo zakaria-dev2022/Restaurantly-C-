@@ -49,3 +49,4 @@ C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.Login.resources
 C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.dashbord.resources
 C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.formEvenement.resources
 C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.Setting.resources
+C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.formMessage.resources

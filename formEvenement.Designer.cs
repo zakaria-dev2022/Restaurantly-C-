@@ -139,7 +139,7 @@
             this.txtdp.Location = new System.Drawing.Point(43, 323);
             this.txtdp.Multiline = true;
             this.txtdp.Name = "txtdp";
-            this.txtdp.Size = new System.Drawing.Size(252, 77);
+            this.txtdp.Size = new System.Drawing.Size(252, 119);
             this.txtdp.TabIndex = 97;
             // 
             // txtp
@@ -280,11 +280,11 @@
             // 
             this.tableau.BackgroundColor = System.Drawing.Color.White;
             this.tableau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableau.Location = new System.Drawing.Point(66, 449);
+            this.tableau.Location = new System.Drawing.Point(163, 481);
             this.tableau.Name = "tableau";
             this.tableau.RowHeadersWidth = 62;
             this.tableau.RowTemplate.Height = 28;
-            this.tableau.Size = new System.Drawing.Size(895, 225);
+            this.tableau.Size = new System.Drawing.Size(709, 225);
             this.tableau.TabIndex = 102;
             this.tableau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableau_CellClick);
             // 
@@ -311,7 +311,6 @@
             this.Controls.Add(this.Modifier);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.img_evenement);
-            this.Controls.Add(this.tableau);
             this.Controls.Add(this.chemin_Img);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label11);
@@ -322,6 +321,7 @@
             this.Controls.Add(this.txtt);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tableau);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formEvenement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

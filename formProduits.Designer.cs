@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.exit = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -44,8 +42,6 @@
             this.txtl = new System.Windows.Forms.TextBox();
             this.txtid = new System.Windows.Forms.TextBox();
             this.chemin_Img = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.img_produit = new System.Windows.Forms.PictureBox();
             this.inport_photo = new Guna.UI2.WinForms.Guna2Button();
             this.Ajouter = new Guna.UI2.WinForms.Guna2Button();
             this.Suprimer = new Guna.UI2.WinForms.Guna2Button();
@@ -55,13 +51,17 @@
             this.lb_type = new System.Windows.Forms.Label();
             this.txtntp = new System.Windows.Forms.TextBox();
             this.ajouter_type = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.img_produit = new System.Windows.Forms.PictureBox();
+            this.exit = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableau)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_produit)).BeginInit();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,17 +76,6 @@
             this.panel1.Size = new System.Drawing.Size(1126, 102);
             this.panel1.TabIndex = 66;
             // 
-            // exit
-            // 
-            this.exit.Image = global::OOP_APP.Properties.Resources.cross;
-            this.exit.Location = new System.Drawing.Point(1027, 19);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(61, 70);
-            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.exit.TabIndex = 46;
-            this.exit.TabStop = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -97,16 +86,6 @@
             this.label5.Size = new System.Drawing.Size(485, 56);
             this.label5.TabIndex = 45;
             this.label5.Text = "Gestion Des Produits";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::OOP_APP.Properties.Resources.product;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label11
             // 
@@ -184,11 +163,11 @@
             // 
             this.tableau.BackgroundColor = System.Drawing.Color.White;
             this.tableau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableau.Location = new System.Drawing.Point(115, 452);
+            this.tableau.Location = new System.Drawing.Point(104, 482);
             this.tableau.Name = "tableau";
             this.tableau.RowHeadersWidth = 62;
             this.tableau.RowTemplate.Height = 28;
-            this.tableau.Size = new System.Drawing.Size(895, 225);
+            this.tableau.Size = new System.Drawing.Size(863, 225);
             this.tableau.TabIndex = 80;
             this.tableau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableau_CellClick_1);
             this.tableau.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableau_CellContentClick);
@@ -226,28 +205,6 @@
             this.chemin_Img.Text = "chemin_Img";
             this.chemin_Img.Visible = false;
             this.chemin_Img.Click += new System.EventHandler(this.chemin_Img_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::OOP_APP.Properties.Resources.plus;
-            this.pictureBox2.Location = new System.Drawing.Point(497, 172);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(49, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 94;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // img_produit
-            // 
-            this.img_produit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.img_produit.Location = new System.Drawing.Point(570, 172);
-            this.img_produit.Name = "img_produit";
-            this.img_produit.Size = new System.Drawing.Size(257, 182);
-            this.img_produit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_produit.TabIndex = 84;
-            this.img_produit.TabStop = false;
-            this.img_produit.Click += new System.EventHandler(this.img_produit_Click);
             // 
             // inport_photo
             // 
@@ -378,6 +335,49 @@
             this.ajouter_type.Visible = false;
             this.ajouter_type.Click += new System.EventHandler(this.ajouter_type_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::OOP_APP.Properties.Resources.plus;
+            this.pictureBox2.Location = new System.Drawing.Point(497, 172);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(49, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 94;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // img_produit
+            // 
+            this.img_produit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.img_produit.Location = new System.Drawing.Point(570, 172);
+            this.img_produit.Name = "img_produit";
+            this.img_produit.Size = new System.Drawing.Size(257, 182);
+            this.img_produit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_produit.TabIndex = 84;
+            this.img_produit.TabStop = false;
+            this.img_produit.Click += new System.EventHandler(this.img_produit_Click);
+            // 
+            // exit
+            // 
+            this.exit.Image = global::OOP_APP.Properties.Resources.cross;
+            this.exit.Location = new System.Drawing.Point(1027, 19);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(61, 70);
+            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.exit.TabIndex = 46;
+            this.exit.TabStop = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::OOP_APP.Properties.Resources.product;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 77);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // formProduits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -401,12 +401,12 @@
             this.Controls.Add(this.txttp);
             this.Controls.Add(this.img_produit);
             this.Controls.Add(this.txtdp);
-            this.Controls.Add(this.tableau);
             this.Controls.Add(this.txtp);
             this.Controls.Add(this.txtl);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.chemin_Img);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tableau);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formProduits";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -414,13 +414,13 @@
             this.Load += new System.EventHandler(this.formProduits_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableau)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_produit)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_produit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

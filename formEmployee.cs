@@ -51,44 +51,21 @@ namespace OOP_APP
             DataTable dataTable = Utils.ObtenirDonnees("select * from employe");
             //DataTable dataTable = Utils.ObtenirDonnees("select nom,prenom,cin,adresse,date_naissance,poste from employe");
             // Lier le DataTable au DataGridView
-            tableau.DataSource = dataTable;
+            tableaux.DataSource = dataTable;
 
         }
 
         private void Suprimer_Click(object sender, EventArgs e)
         {
-            Utils.CloseConnection();
-            if (MessageBox.Show("Voulez-vous suprimer se Employe?", "Restaurantly", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Utils.SuprimerDonner("employe", txtid.Text);
-                MessageBox.Show("Supression Avec Success", "Restaurantly");
-                //Connection.CloseConnection();
-                remplir();
-                nouveau();
-                Ajouter.Enabled = true;
-                Modifier.Enabled = false;
-                Suprimer.Enabled = false;
-            }
+           
         }
 
-        private void Modifier_Click(object sender, EventArgs e)
-        {
-            if (txtn.Text != "" && txtp.Text != "" && txtcn.Text != "" && txtt.Text != "" && txtmt.Text != "" && txtpt.Text != "" && photo.Image != null)
-            {
-                Employee employee = new Employee(txtn.Text, txtp.Text, txtcn.Text, txtt.Text, txtmt.Text, txtpt.Text, lb_photo.Text);
-            int id = int.Parse(txtid.Text);
-            Employee.Modifieremployee(employee,id);
-            nouveau();
-            remplir();
-            Ajouter.Enabled = true;
-            Modifier.Enabled = false;
-            Suprimer.Enabled = false;
-        }
-        }
+     
 
         private void tableau_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            int n = tableau.Rows.Count - 1;
+            if (e.RowIndex >= 0 && e.RowIndex < n)
             {
                 DataGridViewRow row = tableau.Rows[e.RowIndex];
                 txtid.Text = row.Cells["id"].Value.ToString();
@@ -107,6 +84,8 @@ namespace OOP_APP
             else
             {
                 MessageBox.Show("Aucun Element Selectionner", "Restaurantly");
+                txtid.Text = "";
+                nouveau();
                 Ajouter.Enabled = true;
                 Modifier.Enabled = false;
                 Suprimer.Enabled = false;
@@ -162,7 +141,70 @@ namespace OOP_APP
 
         }
 
-        
-        
+        private void Modifier_Click_1(object sender, EventArgs e)
+        {
+            if (txtn.Text != "" && txtp.Text != "" && txtcn.Text != "" && txtt.Text != "" && txtmt.Text != "" && txtpt.Text != "" && photo.Image != null)
+            {
+                Employee employee = new Employee(txtn.Text, txtp.Text, txtcn.Text, txtt.Text, txtmt.Text, txtpt.Text, lb_photo.Text);
+                int id = int.Parse(txtid.Text);
+                Employee.Modifieremployee(employee, id);
+                nouveau();
+                remplir();
+                Ajouter.Enabled = true;
+                Modifier.Enabled = false;
+                Suprimer.Enabled = false;
+            }
+        }
+
+        private void Suprimer_Click_1(object sender, EventArgs e)
+        {
+            Utils.CloseConnection();
+            if (MessageBox.Show("Voulez-vous suprimer se Employe?", "Restaurantly", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Utils.SuprimerDonner("employe", txtid.Text);
+                MessageBox.Show("Supression Avec Success", "Restaurantly");
+                //Connection.CloseConnection();
+                remplir();
+                nouveau();
+                Ajouter.Enabled = true;
+                Modifier.Enabled = false;
+                Suprimer.Enabled = false;
+            }
+        }
+
+        private void tableaux_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tableaux_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int n = tableaux.Rows.Count - 1;
+            if (e.RowIndex >= 0 && e.RowIndex < n)
+            {
+                DataGridViewRow row = tableaux.Rows[e.RowIndex];
+                txtid.Text = row.Cells["id"].Value.ToString();
+                txtn.Text = row.Cells["nom"].Value.ToString();
+                txtp.Text = row.Cells["prenom"].Value.ToString();
+                txtcn.Text = row.Cells["cin"].Value.ToString();
+                txtt.Text = row.Cells["tel"].Value.ToString();
+                txtmt.Text = row.Cells["matricule"].Value.ToString();
+                txtpt.Text = row.Cells["poste"].Value.ToString();
+                lb_photo.Text = row.Cells["photo"].Value.ToString();
+                photo.Image = Image.FromFile(@"C:\laragon\www\Restaurantly\assets\img\employer\" + lb_photo.Text);
+                Ajouter.Enabled = false;
+                Modifier.Enabled = true;
+                Suprimer.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Aucun Element Selectionner", "Restaurantly");
+                txtid.Text = "";
+                nouveau();
+                Ajouter.Enabled = true;
+                Modifier.Enabled = false;
+                Suprimer.Enabled = false;
+            }
+        }
     }
 }

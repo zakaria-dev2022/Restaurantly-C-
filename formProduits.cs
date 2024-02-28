@@ -244,8 +244,9 @@ namespace OOP_APP
 
         private void tableau_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            int n = tableau.Rows.Count - 1;
             Utils.CloseConnection();
-            if (e.RowIndex >= 0)
+            if (e.RowIndex >= 0 && e.RowIndex < n)
             {
                 DataGridViewRow row = tableau.Rows[e.RowIndex];
                 txtid.Text = row.Cells["N°Produit"].Value.ToString();
@@ -265,6 +266,8 @@ namespace OOP_APP
             else
             {
                 MessageBox.Show("Aucun Element Selectionner", "Restaurantly");
+                txtid.Text = "";
+                nouveau();
                 Ajouter.Enabled = true;
                 Modifier.Enabled = false;
                 Suprimer.Enabled = false;

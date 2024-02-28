@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,11 @@ namespace OOP_APP
 
         private void dashbord_Load(object sender, EventArgs e)
         {
+          //  Utils.NombreStatictique("reservation",lb_nr);
+            Utils.NombreStatictique("client",lb_nc);
+            Utils.NombreStatictique("produit",lb_np);
+            Utils.chartReservation(chart1);
+            Utils.AfficherReservationsPourDemain(lb_nr);
 
         }
 
@@ -105,9 +111,13 @@ namespace OOP_APP
 
         private void deconncter_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
+            if (MessageBox.Show("Voulez-vous Déconnecter ?", "Restaurantly", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Login login = new Login();
             this.Hide();
             login.Show();
+
+        }
         }
 
         private void parametre_Click(object sender, EventArgs e)

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setting));
             this.txtna = new System.Windows.Forms.TextBox();
             this.lb_logo = new System.Windows.Forms.Label();
             this.txtmp = new System.Windows.Forms.TextBox();
@@ -36,13 +35,13 @@
             this.inport_photo = new Guna.UI2.WinForms.Guna2Button();
             this.btn_save = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.exit = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.exit = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.oeil_mp = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -134,6 +133,17 @@
             this.panel1.Size = new System.Drawing.Size(881, 102);
             this.panel1.TabIndex = 98;
             // 
+            // exit
+            // 
+            this.exit.Image = global::OOP_APP.Properties.Resources.cross;
+            this.exit.Location = new System.Drawing.Point(801, 12);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(61, 70);
+            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.exit.TabIndex = 46;
+            this.exit.TabStop = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -144,6 +154,16 @@
             this.label5.Size = new System.Drawing.Size(256, 56);
             this.label5.TabIndex = 45;
             this.label5.Text = "Parametre";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::OOP_APP.Properties.Resources.Design_sans_titre__10_;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label10
             // 
@@ -189,30 +209,9 @@
             this.label2.TabIndex = 102;
             this.label2.Text = "Photo";
             // 
-            // exit
-            // 
-            this.exit.Image = global::OOP_APP.Properties.Resources.cross;
-            this.exit.Location = new System.Drawing.Point(801, 12);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(61, 70);
-            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.exit.TabIndex = 46;
-            this.exit.TabStop = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::OOP_APP.Properties.Resources.Design_sans_titre__10_;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 90);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // oeil_mp
             // 
-            this.oeil_mp.Image = ((System.Drawing.Image)(resources.GetObject("oeil_mp.Image")));
+            this.oeil_mp.Image = global::OOP_APP.Properties.Resources.eye;
             this.oeil_mp.Location = new System.Drawing.Point(545, 260);
             this.oeil_mp.Name = "oeil_mp";
             this.oeil_mp.Size = new System.Drawing.Size(38, 27);
@@ -226,7 +225,7 @@
             this.logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.logo.Location = new System.Drawing.Point(269, 302);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(304, 153);
+            this.logo.Size = new System.Drawing.Size(253, 153);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logo.TabIndex = 37;
             this.logo.TabStop = false;

@@ -26,10 +26,8 @@ namespace OOP_APP
 
         void remplir()
         {
-            try
-            {
-                
-                   Utils.cnx.Open();
+            
+                   Utils.OpenConnection();
 
                     string query ="select * from admin where id= 1";
                     MySqlCommand command = new MySqlCommand(query, Utils.cnx);
@@ -42,18 +40,16 @@ namespace OOP_APP
                         txtna.Text= reader[3].ToString();
                         lb_logo.Text = reader[4].ToString();
                     }
-                    Utils.cnx.Close();
+                    Utils.CloseConnection();
                     //reader.Close();
                    
                     logo.Load(@"C:\laragon\www\Restaurantly\assets\img\logo\" + lb_logo.Text);
                 }
                 
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Erreur lors de la recuperation de la colonne : {ex.Message}");
+            
+               // Console.WriteLine($"Erreur lors de la recuperation de la colonne : {ex.Message}");
                 //MessageBox.Show($"Erreur lors de la recuperon de la colonne : {ex.Message}");
-            }
+            
         }
 
         private void Setting_Load(object sender, EventArgs e)

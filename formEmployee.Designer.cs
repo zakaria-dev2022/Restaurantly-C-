@@ -44,27 +44,29 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtcn = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.exit = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtpt = new System.Windows.Forms.ComboBox();
             this.Ajouter = new Guna.UI2.WinForms.Guna2Button();
             this.Suprimer = new Guna.UI2.WinForms.Guna2Button();
             this.Modifier = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtt = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.inport_photo = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lb_photo = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.photo = new System.Windows.Forms.PictureBox();
-            this.exit = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tableaux = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.tableau)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableaux)).BeginInit();
             this.SuspendLayout();
             // 
             // txtid
@@ -103,7 +105,7 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tableau.DefaultCellStyle = dataGridViewCellStyle7;
             this.tableau.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tableau.Location = new System.Drawing.Point(12, 469);
+            this.tableau.Location = new System.Drawing.Point(12, 547);
             this.tableau.Name = "tableau";
             this.tableau.RowHeadersWidth = 62;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
@@ -113,8 +115,9 @@
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Goldenrod;
             this.tableau.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.tableau.RowTemplate.Height = 28;
-            this.tableau.Size = new System.Drawing.Size(1102, 281);
+            this.tableau.Size = new System.Drawing.Size(1102, 62);
             this.tableau.TabIndex = 37;
+            this.tableau.Visible = false;
             this.tableau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableau_CellClick);
             // 
             // label3
@@ -213,6 +216,17 @@
             this.panel1.Size = new System.Drawing.Size(1126, 102);
             this.panel1.TabIndex = 44;
             // 
+            // exit
+            // 
+            this.exit.Image = global::OOP_APP.Properties.Resources.cross;
+            this.exit.Location = new System.Drawing.Point(1027, 19);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(61, 70);
+            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.exit.TabIndex = 46;
+            this.exit.TabStop = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -223,6 +237,16 @@
             this.label5.Size = new System.Drawing.Size(510, 56);
             this.label5.TabIndex = 45;
             this.label5.Text = "Gestion Des Employes";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::OOP_APP.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 77);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // txtpt
             // 
@@ -272,6 +296,7 @@
             this.Suprimer.Size = new System.Drawing.Size(189, 45);
             this.Suprimer.TabIndex = 46;
             this.Suprimer.Text = "Suprimer";
+            this.Suprimer.Click += new System.EventHandler(this.Suprimer_Click_1);
             // 
             // Modifier
             // 
@@ -289,6 +314,7 @@
             this.Modifier.Size = new System.Drawing.Size(189, 45);
             this.Modifier.TabIndex = 47;
             this.Modifier.Text = "Modifier";
+            this.Modifier.Click += new System.EventHandler(this.Modifier_Click_1);
             // 
             // panel2
             // 
@@ -299,6 +325,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1126, 69);
             this.panel2.TabIndex = 48;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Harlow Solid Italic", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(175)))), ((int)(((byte)(113)))));
+            this.label8.Location = new System.Drawing.Point(859, 18);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(246, 51);
+            this.label8.TabIndex = 46;
+            this.label8.Text = "Restaurantly";
             // 
             // txtt
             // 
@@ -360,17 +397,6 @@
             this.lb_photo.Text = "Photo";
             this.lb_photo.Visible = false;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Harlow Solid Italic", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(175)))), ((int)(((byte)(113)))));
-            this.label8.Location = new System.Drawing.Point(859, 18);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(246, 51);
-            this.label8.TabIndex = 46;
-            this.label8.Text = "Restaurantly";
-            // 
             // photo
             // 
             this.photo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -381,26 +407,18 @@
             this.photo.TabIndex = 51;
             this.photo.TabStop = false;
             // 
-            // exit
+            // tableaux
             // 
-            this.exit.Image = global::OOP_APP.Properties.Resources.cross;
-            this.exit.Location = new System.Drawing.Point(1027, 19);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(61, 70);
-            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.exit.TabIndex = 46;
-            this.exit.TabStop = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::OOP_APP.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.tableaux.BackgroundColor = System.Drawing.Color.White;
+            this.tableaux.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableaux.Location = new System.Drawing.Point(12, 452);
+            this.tableaux.Name = "tableaux";
+            this.tableaux.RowHeadersWidth = 62;
+            this.tableaux.RowTemplate.Height = 28;
+            this.tableaux.Size = new System.Drawing.Size(1102, 249);
+            this.tableaux.TabIndex = 55;
+            this.tableaux.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableaux_CellClick);
+            this.tableaux.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableaux_CellContentClick);
             // 
             // formEmployee
             // 
@@ -408,12 +426,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1126, 856);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.tableaux);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.inport_photo);
             this.Controls.Add(this.photo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtt);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.Modifier);
             this.Controls.Add(this.Suprimer);
             this.Controls.Add(this.Ajouter);
@@ -440,11 +459,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableau)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableaux)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,5 +499,6 @@
         private System.Windows.Forms.Label lb_photo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox exit;
+        private System.Windows.Forms.DataGridView tableaux;
     }
 }
