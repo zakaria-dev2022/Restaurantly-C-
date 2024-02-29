@@ -27,14 +27,14 @@ namespace OOP_APP
                 if (cnx.State == System.Data.ConnectionState.Closed)
                 {
                     cnx.Open();
-                    Console.WriteLine("Connexion à la base de données ouverte avec succès.");
-                    MessageBox.Show("Connexion à la base de données ouverte avec succès.", "Gestion Restaurant");
+                   // Console.WriteLine("Connexion à la base de données ouverte avec succès.");
+                   // MessageBox.Show("Connexion à la base de données ouverte avec succès.", "Gestion Restaurant");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erreur lors de l'ouverture de la connexion : " + ex.Message);
-                MessageBox.Show("Erreur lors de l'ouverture de la connexion : " + ex.Message, "Gestion Restaurant");
+               // Console.WriteLine("Erreur lors de l'ouverture de la connexion : " + ex.Message);
+                //MessageBox.Show("Erreur lors de l'ouverture de la connexion : " + ex.Message, "Gestion Restaurant");
             }
         }
 
@@ -46,14 +46,14 @@ namespace OOP_APP
                 if (cnx.State == System.Data.ConnectionState.Open)
                 {
                     cnx.Close();
-                    Console.WriteLine("Connexion à la base de données fermée avec succès.");
-                    MessageBox.Show("Connexion à la base de données fermer avec succès.", "Gestion Restaurant");
+                    //Console.WriteLine("Connexion à la base de données fermée avec succès.");
+                    //MessageBox.Show("Connexion à la base de données fermer avec succès.", "Gestion Restaurant");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erreur lors de la fermeture de la connexion : " + ex.Message);
-                MessageBox.Show("Connexion à la base de données fermer avec succès.", "Gestion Restaurant");
+               // Console.WriteLine("Erreur lors de la fermeture de la connexion : " + ex.Message);
+               // MessageBox.Show("Connexion à la base de données fermer avec succès.", "Gestion Restaurant");
             }
         }
 
@@ -71,15 +71,15 @@ namespace OOP_APP
                     MySqlCommand command = new MySqlCommand(query, cnx);
                     {
                         command.ExecuteNonQuery();
-                        Console.WriteLine($"La colonne {id} a été supprimée de la table {table} avec succès.");
-                        MessageBox.Show($"La colonne {id} a été supprimée de la table {table} avec succès.", "Gestion Restaurant");
+                        //Console.WriteLine($"La colonne {id} a été supprimée de la table {table} avec succès.");
+                        //MessageBox.Show($"La colonne {id} a été supprimée de la table {table} avec succès.", "Gestion Restaurant");
                     }
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Erreur lors de la suppression de la colonne : {ex.Message}");
-                MessageBox.Show($"Erreur lors de la suppression de la colonne : {ex.Message}");
+               // MessageBox.Show($"Erreur lors de la suppression de la colonne : {ex.Message}");
             }
         }
 

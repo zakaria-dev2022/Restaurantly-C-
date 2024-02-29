@@ -34,7 +34,6 @@ C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\System.Runtime.CompilerServices.
 C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP APP.csproj.AssemblyReference.cache
 C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP APP.csproj.SuggestedBindingRedirects.cache
-C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP APP.exe.config
 C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.Form1.resources
 C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.Properties.Resources.resources
 C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP APP.csproj.GenerateResource.cache
@@ -50,3 +49,38 @@ C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.dashbord.resources
 C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.formEvenement.resources
 C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.Setting.resources
 C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.formMessage.resources
+C:\Users\Zakaria\source\repos\OOP APP\obj\Debug\OOP_APP.caissier.resources
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\Enums.NET.dll
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\MathNet.Numerics.dll
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\NPOI.Core.dll
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\NPOI.OOXML.dll
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\SixLabors.Fonts.dll
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\SixLabors.ImageSharp.dll
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\System.Security.AccessControl.dll
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\System.Security.Cryptography.Xml.dll
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\Enums.NET.pdb
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\Enums.NET.xml
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\MathNet.Numerics.xml
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\NPOI.Core.pdb
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\NPOI.Core.xml
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\NPOI.OOXML.pdb
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\NPOI.OOXML.xml
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\NPOI.OpenXml4Net.pdb
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\NPOI.OpenXml4Net.xml
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\NPOI.OpenXmlFormats.pdb
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\NPOI.OpenXmlFormats.xml
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\SixLabors.Fonts.xml
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\SixLabors.ImageSharp.xml
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\System.Security.Cryptography.Xml.xml
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\Zakaria\source\repos\OOP APP\bin\Debug\System.Text.Encoding.CodePages.xml

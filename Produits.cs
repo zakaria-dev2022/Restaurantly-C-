@@ -48,13 +48,13 @@ namespace OOP_APP
                     
 
                     command.ExecuteNonQuery();
-                    MessageBox.Show("ajoute avec success","Gestion Restaurant");
+                    MessageBox.Show("ajoute avec success","Restaurantly");
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erreur ajoute avec success: {ex.Message} ", "Gestion Restaurant");
+                MessageBox.Show($"Erreur ajoute avec success: {ex.Message} ", "Restaurantly");
             }
         }
         public static void ajouterTypeProduit( string type)
@@ -70,13 +70,13 @@ namespace OOP_APP
                 {
                     command.Parameters.AddWithValue("@type", type);
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Ajouter Le Type "+ type+" avec success","Gestion Restaurant");
+                    MessageBox.Show("Ajouter Le Type "+ type+" avec success","Restaurantly");
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erreur ajoute avec success: {ex.Message} ", "Gestion Restaurant");
+                MessageBox.Show($"Erreur ajoute avec success: {ex.Message} ", "Restaurantly");
             }
         }
 
@@ -101,13 +101,13 @@ namespace OOP_APP
                         command.Parameters.AddWithValue("@id", id);
 
                         command.ExecuteNonQuery();
-                        MessageBox.Show("Modification effectuée avec succès", "Gestion Restaurant");
+                        MessageBox.Show("Modification effectuée avec succès", "Restaurantly");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erreur lors de la modification des données : {ex.Message}", "Gestion Restaurant");
+                MessageBox.Show($"Erreur lors de la modification des données : {ex.Message}", "Restaurantly");
             }
         }
 

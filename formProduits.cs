@@ -42,8 +42,8 @@ namespace OOP_APP
             {
                 // Si des données ont été retournées par la requête
                 int id = Convert.ToInt32(dataTable.Rows[0]["id"]);
-                Console.WriteLine("ID récupéré : " + id);
-                MessageBox.Show("ID récupéré : " + id);
+                //Console.WriteLine("ID récupéré : " + id);
+                //MessageBox.Show("ID récupéré : " + id);
                  //txttp.Text = id.ToString();
                 return id;
                 // Vous pouvez maintenant utiliser la variable "id" comme vous le souhaitez
@@ -104,8 +104,8 @@ namespace OOP_APP
             {
                 // Si des données ont été retournées par la requête
                 string type = dataTable.Rows[0]["type"].ToString();
-                Console.WriteLine("ID récupéré : " + type);
-                MessageBox.Show("ID récupéré : " + type);
+               // Console.WriteLine("ID récupéré : " + type);
+               // MessageBox.Show("ID récupéré : " + type);
                 //txttp.Text = id.ToString();
                 return type;
                 // Vous pouvez maintenant utiliser la variable "id" comme vous le souhaitez
@@ -138,6 +138,7 @@ namespace OOP_APP
             //Connection.CloseConnection();
             remplir();
             Ajouter.Enabled = true;
+            pictureBox2.Enabled = true;
             Modifier.Enabled = false;
             Suprimer.Enabled = false;
         }
@@ -151,9 +152,10 @@ namespace OOP_APP
             Produits.ModifierProduits(produit, id);
             nouveau();
             remplir();
-            Ajouter.Enabled = true;
-            Modifier.Enabled = false;
-            Suprimer.Enabled = false;
+            Ajouter.Enabled = false;
+           // pictureBox2.Enabled = false;
+            Modifier.Enabled = true;
+            Suprimer.Enabled = true;
         }
 
         private void Suprimer_Click_1(object sender, EventArgs e)
@@ -162,12 +164,13 @@ namespace OOP_APP
             if (MessageBox.Show("Voulez-vous suprimer Ce Produit?", "Gestion Restaurant", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Utils.SuprimerDonner("produit", txtid.Text);
-                MessageBox.Show("Supression Avec Success");
+                MessageBox.Show("Supression Avec Success", "Restaurantly");
                 remplir();
                 nouveau();
-                Ajouter.Enabled = true;
-                Modifier.Enabled = false;
-                Suprimer.Enabled = false;
+                Ajouter.Enabled = false;
+                //pictureBox2.Enabled = false;
+                Modifier.Enabled = true;
+                Suprimer.Enabled = true;
             }
         }
 
@@ -201,9 +204,10 @@ namespace OOP_APP
                 Modifier.Enabled = false;
                 Suprimer.Enabled = false;
                 inport_photo.Enabled = true;
-                txtl.ReadOnly= true;
-                txtp.ReadOnly= true;
-                txtdp.ReadOnly= true;
+                txtl.ReadOnly = false;
+                txtp.ReadOnly = false;
+                txtdp.ReadOnly = false;
+               
                
             }
             else
@@ -216,9 +220,9 @@ namespace OOP_APP
             Modifier.Enabled=false;
             Suprimer.Enabled = false;
             inport_photo.Enabled = false;
-                txtl.ReadOnly = false;
-                txtp.ReadOnly = false;
-                txtdp.ReadOnly = false;
+                txtl.ReadOnly = true;
+                txtp.ReadOnly = true;
+                txtdp.ReadOnly = true;
             }
         }
 
@@ -228,9 +232,17 @@ namespace OOP_APP
             {
                 Utils.CloseConnection();
                 string type = txtntp.Text;
-            Produits.ajouterTypeProduit(type);
-                txtntp.Text = "";
-                txtntp.Focus();
+                Produits.ajouterTypeProduit(type);
+                txtntp.Visible=false;
+                lb_type.Visible=false;
+                ajouter_type.Visible=false;
+                Ajouter.Enabled = true;
+                Modifier.Enabled = false;
+                Suprimer.Enabled = false;
+                inport_photo.Enabled = true;
+                txtl.ReadOnly = false;
+                txtp.ReadOnly = false;
+                txtdp.ReadOnly = false;
                 Utils.CloseConnection();
                 // remplir_txttp();
                 txttp.Items.Clear();
@@ -257,11 +269,13 @@ namespace OOP_APP
                 //string type_produit = TransferTypeString(id_type_produit);
                 //txttp.Text = type_produit;
                 txttp.Text = row.Cells["type"].Value.ToString();
-                string cheminimg = row.Cells["image"].Value.ToString();
+                chemin_Img.Text = row.Cells["image"].Value.ToString();
+                string cheminimg = chemin_Img.Text;
                 img_produit.Load(@"C:\laragon\www\Restaurantly\assets\img\menu\" + cheminimg);
                 Ajouter.Enabled = false;
                 Modifier.Enabled = true;
                 Suprimer.Enabled = true;
+                pictureBox2.Enabled = false;
             }
             else
             {
@@ -271,6 +285,7 @@ namespace OOP_APP
                 Ajouter.Enabled = true;
                 Modifier.Enabled = false;
                 Suprimer.Enabled = false;
+                pictureBox2.Enabled = true;
             }
         }
 

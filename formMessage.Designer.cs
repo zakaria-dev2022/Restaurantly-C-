@@ -233,6 +233,7 @@
             // 
             this.txttm.Location = new System.Drawing.Point(346, 159);
             this.txttm.Name = "txttm";
+            this.txttm.ReadOnly = true;
             this.txttm.Size = new System.Drawing.Size(161, 26);
             this.txttm.TabIndex = 112;
             // 

@@ -114,7 +114,7 @@ namespace OOP_APP
             if (MessageBox.Show("Voulez-vous Déconnecter ?", "Restaurantly", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Login login = new Login();
-            this.Hide();
+            this.Close();
             login.Show();
 
         }
